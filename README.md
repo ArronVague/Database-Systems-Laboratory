@@ -1,2 +1,2 @@
 # Database-Systems-Laboratory
-A repo to something of database systems lab
+A repo to store something of database systems lab
