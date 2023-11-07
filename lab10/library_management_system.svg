@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="285mm" xmlns="http://www.w3.org/2000/svg" height="157mm" version="1.1" viewBox="0 0 1080 594" xmlns:xlink="http://www.w3.org/1999/xlink">
+   <polyline fill="none" points="383,77 282,77" stroke="#0080c0" stroke-width="1"/>
+   <polygon fill="#0080c0" points="282,77 296,74 296,80" stroke="#0080c0" stroke-width="1" stroke-linejoin="miter"/>
+   <polyline fill="none" points="997,358 997,388" stroke="#0080c0" stroke-width="1"/>
+   <polygon fill="#0080c0" points="997,388 994,375 1000,375" stroke="#0080c0" stroke-width="1" stroke-linejoin="miter"/>
+   <polyline fill="none" points="818,283 915,283" stroke="#0080c0" stroke-width="1"/>
+   <polygon fill="#0080c0" points="915,283 902,286 902,280" stroke="#0080c0" stroke-width="1" stroke-linejoin="miter"/>
+   <polyline fill="none" points="548,283 657,283" stroke="#0080c0" stroke-width="1"/>
+   <polygon fill="#0080c0" points="657,283 644,286 644,280" stroke="#0080c0" stroke-width="1" stroke-linejoin="miter"/>
+   <polyline fill="none" points="463,207 463,153" stroke="#0080c0" stroke-width="1"/>
+   <polygon fill="#0080c0" points="463,153 466,166 460,166" stroke="#0080c0" stroke-width="1" stroke-linejoin="miter"/>
+   <polyline fill="none" points="463,358 463,441" stroke="#0080c0" stroke-width="1"/>
+   <polygon fill="#0080c0" points="463,441 460,428 466,428" stroke="#0080c0" stroke-width="1" stroke-linejoin="miter"/>
+   <polyline fill="none" points="479,358 479,441" stroke="#0080c0" stroke-width="1"/>
+   <polygon fill="#0080c0" points="479,441 476,428 482,428" stroke="#0080c0" stroke-width="1" stroke-linejoin="miter"/>
+   <polyline fill="none" points="355,283 387,283" stroke="#0080c0" stroke-width="1"/>
+   <polygon fill="#0080c0" points="387,283 373,286 373,280" stroke="#0080c0" stroke-width="1" stroke-linejoin="miter"/>
+   <polyline fill="none" points="275,358 275,517 383,517" stroke="#0080c0" stroke-width="1"/>
+   <polygon fill="#0080c0" points="383,517 369,520 369,514" stroke="#0080c0" stroke-width="1" stroke-linejoin="miter"/>
+   <polyline fill="none" points="447,358 447,366 280,366" stroke="#0080c0" stroke-width="1"/>
+   <polyline fill="none" points="269,366 82,366 82,358" stroke="#0080c0" stroke-width="1"/>
+   <path d="M280,366 A5,5 0 0,0 275,361" fill="none" stroke="#0080c0" stroke-width="1"/>
+   <line x1="275" x2="275" y1="361" y2="361" stroke="#0080c0" stroke-width="1"/>
+   <path d="M275,361 A5,5 0 0,0 269,366" fill="none" stroke="#0080c0" stroke-width="1"/>
+   <polygon fill="#0080c0" points="447,358 450,371 444,371" stroke="#0080c0" stroke-width="1" stroke-linejoin="miter"/>
+   <polyline fill="none" points="66,358 66,533 383,533" stroke="#0080c0" stroke-width="1"/>
+   <polygon fill="#0080c0" points="383,533 369,536 369,530" stroke="#0080c0" stroke-width="1" stroke-linejoin="miter"/>
+   <rect x="121" y="2" fill="#ffffff" width="0" height="0" stroke="none" stroke-width="0"/>
+   <defs>
+      <linearGradient id="Gradient1" x1="0%" x2="100%" y1="0%" y2="100%" gradientUnits="objectBoundingBox">
+         <stop offset="5%" stop-color="#ffffff"/>
+         <stop offset="95%" stop-color="#b2d6fc"/>
+      </linearGradient>
+   </defs>
+   <rect x="121" y="2" fill="url(#Gradient1)" width="161" height="151" stroke="#0080c0" stroke-width="1"/>
+   <text x="201" y="12" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="middle">读者类别</text>
+   <line x1="121" x2="282" y1="17" y2="17" stroke="#0080c0" stroke-width="1"/>
+   <text x="126" y="27" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-decoration="underline">读者类别编号</text>
+   <text x="126" y="38" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">读者类别名称</text>
+   <text x="126" y="49" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">可借册数</text>
+   <text x="126" y="60" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">可借天数</text>
+   <text x="194" y="27" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-decoration="underline">int</text>
+   <text x="194" y="38" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">varchar(30)</text>
+   <text x="194" y="49" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">int</text>
+   <text x="194" y="60" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">int</text>
+   <text x="257" y="27" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-decoration="underline">&lt;pk&gt;</text>
+   <rect x="383" y="2" fill="#ffffff" width="0" height="0" stroke="none" stroke-width="0"/>
+   <defs>
+      <linearGradient id="Gradient2" x1="0%" x2="100%" y1="0%" y2="100%" gradientUnits="objectBoundingBox">
+         <stop offset="5%" stop-color="#ffffff"/>
+         <stop offset="95%" stop-color="#b2d6fc"/>
+      </linearGradient>
+   </defs>
+   <rect x="383" y="2" fill="url(#Gradient2)" width="161" height="151" stroke="#0080c0" stroke-width="1"/>
+   <text x="463" y="12" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="middle">读者信息</text>
+   <line x1="383" x2="544" y1="17" y2="17" stroke="#0080c0" stroke-width="1"/>
+   <text x="387" y="27" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-decoration="underline">读者编号</text>
+   <text x="387" y="38" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">读者类别编号</text>
+   <text x="387" y="49" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">姓名</text>
+   <text x="387" y="60" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">性别</text>
+   <text x="387" y="71" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">联系电话</text>
+   <text x="387" y="82" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">登记日期</text>
+   <text x="387" y="93" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">有效期至</text>
+   <text x="387" y="104" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">现借图书数</text>
+   <text x="387" y="115" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">累计借书数</text>
+   <text x="387" y="126" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">是否挂失</text>
+   <text x="387" y="137" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">违规次数</text>
+   <text x="387" y="148" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">备注</text>
+   <text x="455" y="27" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-decoration="underline">int</text>
+   <text x="455" y="38" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">int</text>
+   <text x="455" y="49" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">varchar(30)</text>
+   <text x="455" y="60" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">varchar(10)</text>
+   <text x="455" y="71" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">varchar(30)</text>
+   <text x="455" y="82" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">date</text>
+   <text x="455" y="93" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">date</text>
+   <text x="455" y="104" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">int</text>
+   <text x="455" y="115" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">int</text>
+   <text x="455" y="126" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">bool</text>
+   <text x="455" y="137" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">int</text>
+   <text x="455" y="148" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">text</text>
+   <text x="518" y="27" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-decoration="underline">&lt;pk&gt;</text>
+   <text x="518" y="38" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">&lt;fk&gt;</text>
+   <rect x="915" y="207" fill="#ffffff" width="0" height="0" stroke="none" stroke-width="0"/>
+   <defs>
+      <linearGradient id="Gradient3" x1="0%" x2="100%" y1="0%" y2="100%" gradientUnits="objectBoundingBox">
+         <stop offset="5%" stop-color="#ffffff"/>
+         <stop offset="95%" stop-color="#b2d6fc"/>
+      </linearGradient>
+   </defs>
+   <rect x="915" y="207" fill="url(#Gradient3)" width="161" height="151" stroke="#0080c0" stroke-width="1"/>
+   <text x="995" y="217" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="middle">图书基本信息</text>
+   <line x1="915" x2="1076" y1="222" y2="222" stroke="#0080c0" stroke-width="1"/>
+   <text x="920" y="232" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-decoration="underline">ISBN</text>
+   <text x="920" y="243" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">出版社编号</text>
+   <text x="920" y="254" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">书名</text>
+   <text x="920" y="265" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">类型</text>
+   <text x="920" y="276" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">作者</text>
+   <text x="920" y="287" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">版次</text>
+   <text x="920" y="298" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">出版日期</text>
+   <text x="920" y="309" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">价格</text>
+   <text x="920" y="320" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">简介</text>
+   <text x="920" y="331" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">现在库数量</text>
+   <text x="920" y="342" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">库存总量</text>
+   <text x="978" y="232" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-decoration="underline">varchar(13)</text>
+   <text x="978" y="243" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">int</text>
+   <text x="978" y="254" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">varchar(30)</text>
+   <text x="978" y="265" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">varchar(10)</text>
+   <text x="978" y="276" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">varchar(30)</text>
+   <text x="978" y="287" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">varchar(10)</text>
+   <text x="978" y="298" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">date</text>
+   <text x="978" y="309" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">double</text>
+   <text x="978" y="320" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">text</text>
+   <text x="978" y="331" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">int</text>
+   <text x="978" y="342" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">int</text>
+   <text x="1041" y="232" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-decoration="underline">&lt;pk&gt;</text>
+   <text x="1041" y="243" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">&lt;fk&gt;</text>
+   <rect x="917" y="388" fill="#ffffff" width="0" height="0" stroke="none" stroke-width="0"/>
+   <defs>
+      <linearGradient id="Gradient4" x1="0%" x2="100%" y1="0%" y2="100%" gradientUnits="objectBoundingBox">
+         <stop offset="5%" stop-color="#ffffff"/>
+         <stop offset="95%" stop-color="#b2d6fc"/>
+      </linearGradient>
+   </defs>
+   <rect x="917" y="388" fill="url(#Gradient4)" width="161" height="151" stroke="#0080c0" stroke-width="1"/>
+   <text x="997" y="398" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="middle">出版社信息</text>
+   <line x1="917" x2="1078" y1="403" y2="403" stroke="#0080c0" stroke-width="1"/>
+   <text x="921" y="413" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-decoration="underline">出版社编号</text>
+   <text x="921" y="424" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">出版社名称</text>
+   <text x="921" y="435" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">联系人</text>
+   <text x="921" y="446" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">联系电话</text>
+   <text x="921" y="457" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">传真</text>
+   <text x="921" y="468" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">地址</text>
+   <text x="979" y="413" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-decoration="underline">int</text>
+   <text x="979" y="424" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">varchar(30)</text>
+   <text x="979" y="435" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">varchar(30)</text>
+   <text x="979" y="446" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">varchar(30)</text>
+   <text x="979" y="457" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">varchar(30)</text>
+   <text x="979" y="468" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">varchar(50)</text>
+   <text x="1042" y="413" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-decoration="underline">&lt;pk&gt;</text>
+   <rect x="657" y="207" fill="#ffffff" width="0" height="0" stroke="none" stroke-width="0"/>
+   <defs>
+      <linearGradient id="Gradient5" x1="0%" x2="100%" y1="0%" y2="100%" gradientUnits="objectBoundingBox">
+         <stop offset="5%" stop-color="#ffffff"/>
+         <stop offset="95%" stop-color="#b2d6fc"/>
+      </linearGradient>
+   </defs>
+   <rect x="657" y="207" fill="url(#Gradient5)" width="161" height="151" stroke="#0080c0" stroke-width="1"/>
+   <text x="737" y="217" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="middle">图书馆藏信息</text>
+   <line x1="657" x2="818" y1="222" y2="222" stroke="#0080c0" stroke-width="1"/>
+   <text x="662" y="232" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-decoration="underline">图书编号</text>
+   <text x="662" y="243" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">ISBN</text>
+   <text x="662" y="254" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">入库时间</text>
+   <text x="662" y="265" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">图书状态</text>
+   <text x="710" y="232" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-decoration="underline">int</text>
+   <text x="710" y="243" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">varchar(13)</text>
+   <text x="710" y="254" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">date</text>
+   <text x="710" y="265" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">varchar(10)</text>
+   <text x="773" y="232" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-decoration="underline">&lt;pk&gt;</text>
+   <text x="773" y="243" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">&lt;fk&gt;</text>
+   <rect x="383" y="441" fill="#ffffff" width="0" height="0" stroke="none" stroke-width="0"/>
+   <defs>
+      <linearGradient id="Gradient6" x1="0%" x2="100%" y1="0%" y2="100%" gradientUnits="objectBoundingBox">
+         <stop offset="5%" stop-color="#ffffff"/>
+         <stop offset="95%" stop-color="#b2d6fc"/>
+      </linearGradient>
+   </defs>
+   <rect x="383" y="441" fill="url(#Gradient6)" width="161" height="151" stroke="#0080c0" stroke-width="1"/>
+   <text x="463" y="451" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="middle">管理员信息</text>
+   <line x1="383" x2="544" y1="456" y2="456" stroke="#0080c0" stroke-width="1"/>
+   <text x="387" y="466" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-decoration="underline">管理员工号</text>
+   <text x="387" y="477" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">姓名</text>
+   <text x="387" y="488" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">性别</text>
+   <text x="387" y="499" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">联系电话</text>
+   <text x="387" y="510" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">岗位</text>
+   <text x="445" y="466" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-decoration="underline">int</text>
+   <text x="445" y="477" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">varchar(30)</text>
+   <text x="445" y="488" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">varchar(10)</text>
+   <text x="445" y="499" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">varchar(30)</text>
+   <text x="445" y="510" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">varchar(10)</text>
+   <text x="508" y="466" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-decoration="underline">&lt;pk&gt;</text>
+   <rect x="387" y="207" fill="#ffffff" width="0" height="0" stroke="none" stroke-width="0"/>
+   <defs>
+      <linearGradient id="Gradient7" x1="0%" x2="100%" y1="0%" y2="100%" gradientUnits="objectBoundingBox">
+         <stop offset="5%" stop-color="#ffffff"/>
+         <stop offset="95%" stop-color="#b2d6fc"/>
+      </linearGradient>
+   </defs>
+   <rect x="387" y="207" fill="url(#Gradient7)" width="161" height="151" stroke="#0080c0" stroke-width="1"/>
+   <text x="467" y="217" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="middle">图书借阅记录</text>
+   <line x1="387" x2="548" y1="222" y2="222" stroke="#0080c0" stroke-width="1"/>
+   <text x="391" y="232" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-decoration="underline">借阅记录编号</text>
+   <text x="391" y="243" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">图书编号</text>
+   <text x="391" y="254" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">读者编号</text>
+   <text x="391" y="265" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">借阅业务管理员工号</text>
+   <text x="391" y="276" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">归还业务管理员工号</text>
+   <text x="391" y="287" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">借阅时间</text>
+   <text x="391" y="298" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">应还时间</text>
+   <text x="391" y="309" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">续借次数</text>
+   <text x="391" y="320" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">归还时间</text>
+   <text x="391" y="331" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">是否超期</text>
+   <text x="391" y="342" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">是否丢失</text>
+   <text x="489" y="232" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-decoration="underline">int</text>
+   <text x="489" y="243" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">int</text>
+   <text x="489" y="254" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">int</text>
+   <text x="489" y="265" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">int</text>
+   <text x="489" y="276" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">int</text>
+   <text x="489" y="287" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">date</text>
+   <text x="489" y="298" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">date</text>
+   <text x="489" y="309" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">int</text>
+   <text x="489" y="320" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">date</text>
+   <text x="489" y="331" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">bool</text>
+   <text x="489" y="342" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">bool</text>
+   <text x="517" y="232" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-decoration="underline">&lt;pk&gt;</text>
+   <text x="517" y="243" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">&lt;fk1&gt;</text>
+   <text x="517" y="254" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">&lt;fk2&gt;</text>
+   <text x="517" y="265" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">&lt;fk3&gt;</text>
+   <text x="517" y="276" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">&lt;fk4&gt;</text>
+   <rect x="194" y="207" fill="#ffffff" width="0" height="0" stroke="none" stroke-width="0"/>
+   <defs>
+      <linearGradient id="Gradient8" x1="0%" x2="100%" y1="0%" y2="100%" gradientUnits="objectBoundingBox">
+         <stop offset="5%" stop-color="#ffffff"/>
+         <stop offset="95%" stop-color="#b2d6fc"/>
+      </linearGradient>
+   </defs>
+   <rect x="194" y="207" fill="url(#Gradient8)" width="161" height="151" stroke="#0080c0" stroke-width="1"/>
+   <text x="274" y="217" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="middle">超期罚款</text>
+   <line x1="194" x2="355" y1="222" y2="222" stroke="#0080c0" stroke-width="1"/>
+   <text x="199" y="232" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-decoration="underline">罚款编号</text>
+   <text x="199" y="243" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">借阅记录编号</text>
+   <text x="199" y="254" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">管理员工号</text>
+   <text x="199" y="265" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">罚款金额</text>
+   <text x="199" y="276" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">是否交款</text>
+   <text x="199" y="287" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">罚款日期</text>
+   <text x="199" y="298" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">备注</text>
+   <text x="267" y="232" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-decoration="underline">int</text>
+   <text x="267" y="243" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">int</text>
+   <text x="267" y="254" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">int</text>
+   <text x="267" y="265" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">double</text>
+   <text x="267" y="276" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">bool</text>
+   <text x="267" y="287" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">date</text>
+   <text x="267" y="298" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">text</text>
+   <text x="305" y="232" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-decoration="underline">&lt;pk&gt;</text>
+   <text x="305" y="243" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">&lt;fk1&gt;</text>
+   <text x="305" y="254" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">&lt;fk2&gt;</text>
+   <rect x="2" y="207" fill="#ffffff" width="0" height="0" stroke="none" stroke-width="0"/>
+   <defs>
+      <linearGradient id="Gradient9" x1="0%" x2="100%" y1="0%" y2="100%" gradientUnits="objectBoundingBox">
+         <stop offset="5%" stop-color="#ffffff"/>
+         <stop offset="95%" stop-color="#b2d6fc"/>
+      </linearGradient>
+   </defs>
+   <rect x="2" y="207" fill="url(#Gradient9)" width="161" height="151" stroke="#0080c0" stroke-width="1"/>
+   <text x="82" y="217" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="middle">图书丢失</text>
+   <line x1="2" x2="163" y1="222" y2="222" stroke="#0080c0" stroke-width="1"/>
+   <text x="7" y="232" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-decoration="underline">丢失编号</text>
+   <text x="7" y="243" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">借阅记录编号</text>
+   <text x="7" y="254" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">管理员工号</text>
+   <text x="7" y="265" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">罚款金额</text>
+   <text x="7" y="276" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">是否交款</text>
+   <text x="7" y="287" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">操作时间</text>
+   <text x="7" y="298" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">备注</text>
+   <text x="75" y="232" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-decoration="underline">int</text>
+   <text x="75" y="243" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">int</text>
+   <text x="75" y="254" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">int</text>
+   <text x="75" y="265" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">double</text>
+   <text x="75" y="276" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">bool</text>
+   <text x="75" y="287" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">date</text>
+   <text x="75" y="298" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">text</text>
+   <text x="113" y="232" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-decoration="underline">&lt;pk&gt;</text>
+   <text x="113" y="243" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">&lt;fk1&gt;</text>
+   <text x="113" y="254" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'">&lt;fk2&gt;</text>
+</svg>
