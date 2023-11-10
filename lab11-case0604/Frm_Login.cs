@@ -67,5 +67,12 @@ namespace lab11_case0604
             Frm_Main frm = new Frm_Main();
             frm.Show();
         }
+
+        private void bnt_Register_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Frm_SignUp frm = new Frm_SignUp();
+            frm.Show();
+        }
     }
 }
