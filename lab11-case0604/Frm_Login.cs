@@ -20,6 +20,7 @@ namespace lab11_case0604
         public Frm_Login()
         {
             InitializeComponent();
+           
         }
 
         private void btn_Login_Click(object sender, EventArgs e)
@@ -37,15 +38,12 @@ namespace lab11_case0604
                 txt_Password.Focus();
                 return;
             }
-            
-            List<string> config = DatabaseConfig.GetConfig();
-            string connectStr = string.Format("server={0}; database={1}; UID={2}; PWD={3}; port={4}", config[0], config[1], config[2], config[3], config[4]);
 
             string username = txt_UserName.Text.Trim();
 
             string query = string.Format("SELECT * FROM user_info WHERE UserName='{0}'", username);
             
-            MySqlConnection conn = new MySqlConnection(connectStr);
+            MySqlConnection conn = Database.GetMySqlConnection();
             conn.Open();
             MySqlDataAdapter da = new MySqlDataAdapter(query, conn);
             DataTable dt = new DataTable();

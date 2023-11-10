@@ -38,7 +38,7 @@
             // txt_UserName
             // 
             this.txt_UserName.Location = new System.Drawing.Point(164, 48);
-            this.txt_UserName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_UserName.Margin = new System.Windows.Forms.Padding(2);
             this.txt_UserName.Name = "txt_UserName";
             this.txt_UserName.Size = new System.Drawing.Size(153, 21);
             this.txt_UserName.TabIndex = 0;
@@ -46,7 +46,7 @@
             // txt_Password
             // 
             this.txt_Password.Location = new System.Drawing.Point(164, 91);
-            this.txt_Password.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_Password.Margin = new System.Windows.Forms.Padding(2);
             this.txt_Password.Name = "txt_Password";
             this.txt_Password.PasswordChar = '*';
             this.txt_Password.Size = new System.Drawing.Size(153, 21);
@@ -75,7 +75,7 @@
             // btn_Login
             // 
             this.btn_Login.Location = new System.Drawing.Point(164, 162);
-            this.btn_Login.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Login.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Login.Name = "btn_Login";
             this.btn_Login.Size = new System.Drawing.Size(80, 31);
             this.btn_Login.TabIndex = 4;
@@ -87,15 +87,15 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(400, 225);
+            this.ClientSize = new System.Drawing.Size(425, 231);
             this.Controls.Add(this.btn_Login);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txt_Password);
             this.Controls.Add(this.txt_UserName);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Frm_Login";
-            this.Text = "Form1";
+            this.Text = "Login";
             this.ResumeLayout(false);
             this.PerformLayout();
 
