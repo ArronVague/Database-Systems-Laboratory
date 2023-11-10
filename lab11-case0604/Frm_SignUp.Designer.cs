@@ -40,6 +40,7 @@
             this.rbtn_Sex2 = new System.Windows.Forms.RadioButton();
             this.nudown_Age = new System.Windows.Forms.NumericUpDown();
             this.btn_Register = new System.Windows.Forms.Button();
+            this.bnt_cancel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.nudown_Age)).BeginInit();
             this.SuspendLayout();
             // 
@@ -152,7 +153,7 @@
             // 
             // btn_Register
             // 
-            this.btn_Register.Location = new System.Drawing.Point(206, 282);
+            this.btn_Register.Location = new System.Drawing.Point(122, 282);
             this.btn_Register.Name = "btn_Register";
             this.btn_Register.Size = new System.Drawing.Size(75, 23);
             this.btn_Register.TabIndex = 15;
@@ -160,11 +161,22 @@
             this.btn_Register.UseVisualStyleBackColor = true;
             this.btn_Register.Click += new System.EventHandler(this.btn_Register_Click);
             // 
+            // bnt_cancel
+            // 
+            this.bnt_cancel.Location = new System.Drawing.Point(274, 282);
+            this.bnt_cancel.Name = "bnt_cancel";
+            this.bnt_cancel.Size = new System.Drawing.Size(75, 23);
+            this.bnt_cancel.TabIndex = 16;
+            this.bnt_cancel.Text = "Cancel";
+            this.bnt_cancel.UseVisualStyleBackColor = true;
+            this.bnt_cancel.Click += new System.EventHandler(this.bnt_cancel_Click);
+            // 
             // Frm_SignUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(478, 317);
+            this.Controls.Add(this.bnt_cancel);
             this.Controls.Add(this.btn_Register);
             this.Controls.Add(this.nudown_Age);
             this.Controls.Add(this.rbtn_Sex2);
@@ -199,5 +211,6 @@
         private System.Windows.Forms.RadioButton rbtn_Sex2;
         private System.Windows.Forms.NumericUpDown nudown_Age;
         private System.Windows.Forms.Button btn_Register;
+        private System.Windows.Forms.Button bnt_cancel;
     }
 }

@@ -16,8 +16,8 @@ namespace lab11_case0604
         public Frm_SignUp()
         {
             InitializeComponent();
-/*            rbtn_Sex1.Checked = true;
-            rbtn_Sex2.Checked = !rbtn_Sex1.Checked;*/
+            // bind FormClosed function with FormClosed event
+            this.FormClosed += Frm_SignUp_FormClosed;
         }
 
         private void btn_Register_Click(object sender, EventArgs e)
@@ -93,6 +93,17 @@ namespace lab11_case0604
                 MessageBox.Show("Fail!");
             }
             return;
+        }
+
+        private void bnt_cancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void Frm_SignUp_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Frm_Login frm = (Frm_Login)Application.OpenForms["Frm_Login"];
+            frm.Show();
         }
     }
 }
