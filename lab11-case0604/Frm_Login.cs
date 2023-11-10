@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using Microsoft.SqlServer.Server;
 using MySql.Data.MySqlClient;
 using System.IO;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace lab11_case0604
 {
@@ -23,32 +24,26 @@ namespace lab11_case0604
 
         private void btn_Login_Click(object sender, EventArgs e)
         {
-            string filePath = "../../../config.ini";
-
-            List<string> config = new List<string>();
-            using (StreamReader reader = new StreamReader(filePath))
+            if (txt_UserName.Text.Trim().Length == 0)
             {
-                string line;
-                
-                while ((line = reader.ReadLine()) != null)
-                {
-                    string[] parts = line.Split('=');
-                    if (parts.Length == 2)
-                    {
-                        string value = parts[1];
-                        config.Add(value);
-                    }
-                }
+                MessageBox.Show("Please enter username!");
+                txt_UserName.Focus();
+                return;
             }
-  
-            string server = config[0];
-            string database = config[1];
-            string UID = config[2];
-            string PWD = config[3];
-            string port = config[4];
-            string connectStr = string.Format("server={0}; database={1}; UID={2}; PWD={3}; port={4}", server, database, UID, PWD, port);
 
-            string query = "select * from User_Info";
+            if (txt_Password.Text.Trim().Length == 0)
+            {
+                MessageBox.Show("Please enter password!");
+                txt_Password.Focus();
+                return;
+            }
+            
+            List<string> config = DatabaseConfig.GetConfig();
+            string connectStr = string.Format("server={0}; database={1}; UID={2}; PWD={3}; port={4}", config[0], config[1], config[2], config[3], config[4]);
+
+            string username = txt_UserName.Text.Trim();
+
+            string query = string.Format("SELECT * FROM user_info WHERE UserName='{0}'", username);
             
             MySqlConnection conn = new MySqlConnection(connectStr);
             conn.Open();
@@ -57,14 +52,22 @@ namespace lab11_case0604
             da.Fill(dt);
             conn.Close();
 
-            if (dt.Rows.Count > 0)
+            if (dt.Rows.Count == 0)
             {
-                Console.WriteLine("yes");
+                MessageBox.Show("Username does not exist!");
+                return;
             }
-            else
+
+            string password = txt_Password.Text.Trim();
+            if (dt.Rows[0]["password"].ToString() != password)
             {
-                Console.WriteLine("no");
+                MessageBox.Show("Wrong password!");
+                return;
             }
+
+            this.Hide();
+            Frm_Main frm = new Frm_Main();
+            frm.Show();
         }
     }
 }
