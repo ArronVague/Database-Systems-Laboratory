@@ -85,8 +85,6 @@ namespace lab11_case0604
             {
                 MessageBox.Show("Register successfully!");
                 this.Close();
-                Frm_Main frm = new Frm_Main();
-                frm.Show();
             }
             else
             {
