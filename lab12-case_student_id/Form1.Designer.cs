@@ -81,7 +81,7 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(43, 22);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(731, 371);
+            this.groupBox1.Size = new System.Drawing.Size(970, 388);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Edit customer information  Status:";
@@ -97,7 +97,7 @@
             // 
             // btn_Cancel
             // 
-            this.btn_Cancel.Location = new System.Drawing.Point(387, 297);
+            this.btn_Cancel.Location = new System.Drawing.Point(503, 297);
             this.btn_Cancel.Name = "btn_Cancel";
             this.btn_Cancel.Size = new System.Drawing.Size(101, 45);
             this.btn_Cancel.TabIndex = 16;
@@ -106,17 +106,18 @@
             // 
             // btn_Save
             // 
-            this.btn_Save.Location = new System.Drawing.Point(189, 297);
+            this.btn_Save.Location = new System.Drawing.Point(314, 297);
             this.btn_Save.Name = "btn_Save";
             this.btn_Save.Size = new System.Drawing.Size(101, 45);
             this.btn_Save.TabIndex = 15;
             this.btn_Save.Text = "Save";
             this.btn_Save.UseVisualStyleBackColor = true;
+            this.btn_Save.Click += new System.EventHandler(this.btn_Save_Click);
             // 
             // rbtn_Sex2
             // 
             this.rbtn_Sex2.AutoSize = true;
-            this.rbtn_Sex2.Location = new System.Drawing.Point(245, 157);
+            this.rbtn_Sex2.Location = new System.Drawing.Point(302, 154);
             this.rbtn_Sex2.Name = "rbtn_Sex2";
             this.rbtn_Sex2.Size = new System.Drawing.Size(113, 28);
             this.rbtn_Sex2.TabIndex = 14;
@@ -127,7 +128,7 @@
             // rbtn_Sex1
             // 
             this.rbtn_Sex1.AutoSize = true;
-            this.rbtn_Sex1.Location = new System.Drawing.Point(151, 156);
+            this.rbtn_Sex1.Location = new System.Drawing.Point(208, 153);
             this.rbtn_Sex1.Name = "rbtn_Sex1";
             this.rbtn_Sex1.Size = new System.Drawing.Size(89, 28);
             this.rbtn_Sex1.TabIndex = 13;
@@ -137,29 +138,29 @@
             // 
             // nudown_Age
             // 
-            this.nudown_Age.Location = new System.Drawing.Point(502, 150);
+            this.nudown_Age.Location = new System.Drawing.Point(629, 150);
             this.nudown_Age.Name = "nudown_Age";
             this.nudown_Age.Size = new System.Drawing.Size(120, 35);
             this.nudown_Age.TabIndex = 12;
             // 
             // txt_Telephone
             // 
-            this.txt_Telephone.Location = new System.Drawing.Point(151, 229);
+            this.txt_Telephone.Location = new System.Drawing.Point(208, 226);
             this.txt_Telephone.Name = "txt_Telephone";
-            this.txt_Telephone.Size = new System.Drawing.Size(203, 35);
+            this.txt_Telephone.Size = new System.Drawing.Size(236, 35);
             this.txt_Telephone.TabIndex = 11;
             // 
             // txt_Address
             // 
-            this.txt_Address.Location = new System.Drawing.Point(502, 232);
+            this.txt_Address.Location = new System.Drawing.Point(629, 232);
             this.txt_Address.Name = "txt_Address";
-            this.txt_Address.Size = new System.Drawing.Size(203, 35);
+            this.txt_Address.Size = new System.Drawing.Size(243, 35);
             this.txt_Address.TabIndex = 9;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(383, 232);
+            this.label6.Location = new System.Drawing.Point(510, 232);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(94, 24);
             this.label6.TabIndex = 8;
@@ -168,7 +169,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(398, 156);
+            this.label5.Location = new System.Drawing.Point(525, 156);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(46, 24);
             this.label5.TabIndex = 6;
@@ -176,15 +177,15 @@
             // 
             // txt_Company
             // 
-            this.txt_Company.Location = new System.Drawing.Point(502, 62);
+            this.txt_Company.Location = new System.Drawing.Point(629, 62);
             this.txt_Company.Name = "txt_Company";
-            this.txt_Company.Size = new System.Drawing.Size(203, 35);
+            this.txt_Company.Size = new System.Drawing.Size(243, 35);
             this.txt_Company.TabIndex = 5;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(383, 62);
+            this.label4.Location = new System.Drawing.Point(510, 62);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(94, 24);
             this.label4.TabIndex = 4;
@@ -192,15 +193,15 @@
             // 
             // txt_Name
             // 
-            this.txt_Name.Location = new System.Drawing.Point(151, 65);
+            this.txt_Name.Location = new System.Drawing.Point(208, 62);
             this.txt_Name.Name = "txt_Name";
-            this.txt_Name.Size = new System.Drawing.Size(203, 35);
+            this.txt_Name.Size = new System.Drawing.Size(236, 35);
             this.txt_Name.TabIndex = 3;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(27, 235);
+            this.label3.Location = new System.Drawing.Point(84, 232);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(118, 24);
             this.label3.TabIndex = 2;
@@ -209,7 +210,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(32, 150);
+            this.label2.Location = new System.Drawing.Point(89, 147);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(46, 24);
             this.label2.TabIndex = 1;
@@ -218,7 +219,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(32, 65);
+            this.label1.Location = new System.Drawing.Point(89, 62);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(58, 24);
             this.label1.TabIndex = 0;
@@ -229,9 +230,9 @@
             this.groupBox2.Controls.Add(this.lv_Customer);
             this.groupBox2.Controls.Add(this.lbl_Note);
             this.groupBox2.Controls.Add(this.btn_Del);
-            this.groupBox2.Location = new System.Drawing.Point(43, 428);
+            this.groupBox2.Location = new System.Drawing.Point(43, 413);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(731, 498);
+            this.groupBox2.Size = new System.Drawing.Size(970, 557);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Customer information list";
@@ -252,7 +253,7 @@
             this.lv_Customer.Location = new System.Drawing.Point(21, 35);
             this.lv_Customer.MultiSelect = false;
             this.lv_Customer.Name = "lv_Customer";
-            this.lv_Customer.Size = new System.Drawing.Size(684, 457);
+            this.lv_Customer.Size = new System.Drawing.Size(931, 503);
             this.lv_Customer.TabIndex = 19;
             this.lv_Customer.UseCompatibleStateImageBehavior = false;
             this.lv_Customer.View = System.Windows.Forms.View.Details;
@@ -311,7 +312,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(816, 949);
+            this.ClientSize = new System.Drawing.Size(1049, 1002);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "Form1";
