@@ -30,6 +30,7 @@ namespace lab12_case_student_id
             rbtn_Sex1.Checked = true;
             nudown_Age.Value = 0;
             lbl_Status.Text = "Add";
+            customerid = "";
         }
 
         private void btn_Save_Click(object sender, EventArgs e)
@@ -129,7 +130,7 @@ namespace lab12_case_student_id
             DataBind_Customer();
         }
 
-        private string customerid = "";
+        private string customerid;
 
         private void lv_Customer_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -147,6 +148,39 @@ namespace lab12_case_student_id
                 txt_Address.Text = myitem.SubItems[6].Text;
 
                 lbl_Status.Text = "Modify";
+            }
+        }
+
+        private void btn_Del_Click(object sender, EventArgs e)
+        {
+            if (customerid == "")
+            {
+                MessageBox.Show("Please select the one you want to delete");
+                return;
+            }
+
+            DialogResult res = MessageBox.Show("Sure you want to delete?", "Delete tips", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (res == DialogResult.Yes)
+            {
+                string query = string.Format("DELETE FROM customer_info WHERE CustomerID={0}", customerid);
+                MySqlConnection conn = Database.GetMySqlConnection();
+                conn.Open();
+                MySqlCommand cmd = new MySqlCommand(query, conn);
+                int i = cmd.ExecuteNonQuery();
+                conn.Close();
+
+                if (i > 0)
+                {
+                    lbl_Note.ForeColor = Color.Blue;
+                    lbl_Note.Text = "Deleted successfully!";
+                    ClearTextBox();
+                    DataBind_Customer();
+                }
+                else
+                {
+                    lbl_Note.ForeColor = Color.Red;
+                    lbl_Note.Text = "Delete failed!";
+                }
             }
         }
     }

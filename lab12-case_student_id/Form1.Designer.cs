@@ -318,9 +318,8 @@
             this.lbl_Note.Location = new System.Drawing.Point(237, 0);
             this.lbl_Note.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_Note.Name = "lbl_Note";
-            this.lbl_Note.Size = new System.Drawing.Size(41, 12);
+            this.lbl_Note.Size = new System.Drawing.Size(0, 12);
             this.lbl_Note.TabIndex = 18;
-            this.lbl_Note.Text = "label7";
             // 
             // btn_Del
             // 
@@ -331,6 +330,7 @@
             this.btn_Del.TabIndex = 0;
             this.btn_Del.Text = "Delete";
             this.btn_Del.UseVisualStyleBackColor = true;
+            this.btn_Del.Click += new System.EventHandler(this.btn_Del_Click);
             // 
             // Form1
             // 
