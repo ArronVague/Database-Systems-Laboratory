@@ -67,9 +67,34 @@ namespace lab12_case_student_id
                 }
                 else
                 {
-                    lbl_Note.ForeColor = Color.Blue;
+                    lbl_Note.ForeColor = Color.Red;
                     lbl_Note.Text = "Add failed!";
                 }
+                return;
+            }
+
+            if (lbl_Status.Text == "Modify")
+            {
+                string query = string.Format("UPDATE customer_info SET CustomerName='{0}', Company='{1}', Sex='{2}', Age={3}, Telephone='{4}', Address='{5}' WHERE CustomerID={6}", name, company, sex, age, telephone, address, customerid);
+                MySqlConnection conn = Database.GetMySqlConnection();
+                conn.Open();
+                MySqlCommand cmd = new MySqlCommand(query, conn);
+                int i = cmd.ExecuteNonQuery();
+                conn.Close();
+
+                if (i > 0)
+                {
+                    lbl_Note.ForeColor = Color.Blue;
+                    lbl_Note.Text = "Modified successfully!";
+                    ClearTextBox();
+                    DataBind_Customer();
+                }
+                else
+                {
+                    lbl_Note.ForeColor = Color.Red;
+                    lbl_Note.Text = "Modify failed!";
+                }
+                return;
             }
         }
 
