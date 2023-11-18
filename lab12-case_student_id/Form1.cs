@@ -17,7 +17,7 @@ namespace lab12_case_student_id
         public Form1()
         {
             InitializeComponent();
-            lbl_Status.Text = "Add";
+            ClearTextBox();
         }
 
         private void ClearTextBox()
@@ -69,6 +69,37 @@ namespace lab12_case_student_id
                     lbl_Note.Text = "Add failed!";
                 }
             }
+        }
+
+        private void DataBind_Customer()
+        {
+            string query = "SELECT * FROM customer_info";
+            MySqlConnection conn = Database.GetMySqlConnection();
+            conn.Open();
+            MySqlDataAdapter da = new MySqlDataAdapter(query, conn);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            conn.Close();
+
+            lv_Customer.Items.Clear();
+
+            foreach (DataRow dr in dt.Rows)
+            {
+                ListViewItem myitem = new ListViewItem(dr["CustomerID"].ToString());
+                myitem.SubItems.Add(dr["CustomerName"].ToString());
+                myitem.SubItems.Add(dr["Company"].ToString());
+                myitem.SubItems.Add(dr["Sex"].ToString());
+                myitem.SubItems.Add(dr["Age"].ToString());
+                myitem.SubItems.Add(dr["Telephone"].ToString());
+                myitem.SubItems.Add(dr["Address"].ToString());
+
+                lv_Customer.Items.Add(myitem);
+            }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            DataBind_Customer();
         }
     }
 }

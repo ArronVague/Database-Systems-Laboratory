@@ -79,9 +79,11 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(43, 22);
+            this.groupBox1.Location = new System.Drawing.Point(22, 11);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(970, 388);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Size = new System.Drawing.Size(485, 194);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Edit customer information  Status:";
@@ -89,26 +91,29 @@
             // lbl_Status
             // 
             this.lbl_Status.AutoSize = true;
-            this.lbl_Status.Location = new System.Drawing.Point(436, 0);
+            this.lbl_Status.Location = new System.Drawing.Point(218, 0);
+            this.lbl_Status.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_Status.Name = "lbl_Status";
-            this.lbl_Status.Size = new System.Drawing.Size(82, 24);
+            this.lbl_Status.Size = new System.Drawing.Size(41, 12);
             this.lbl_Status.TabIndex = 17;
             this.lbl_Status.Text = "label7";
             // 
             // btn_Cancel
             // 
-            this.btn_Cancel.Location = new System.Drawing.Point(503, 297);
+            this.btn_Cancel.Location = new System.Drawing.Point(252, 148);
+            this.btn_Cancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_Cancel.Name = "btn_Cancel";
-            this.btn_Cancel.Size = new System.Drawing.Size(101, 45);
+            this.btn_Cancel.Size = new System.Drawing.Size(50, 22);
             this.btn_Cancel.TabIndex = 16;
             this.btn_Cancel.Text = "Cancel";
             this.btn_Cancel.UseVisualStyleBackColor = true;
             // 
             // btn_Save
             // 
-            this.btn_Save.Location = new System.Drawing.Point(314, 297);
+            this.btn_Save.Location = new System.Drawing.Point(157, 148);
+            this.btn_Save.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_Save.Name = "btn_Save";
-            this.btn_Save.Size = new System.Drawing.Size(101, 45);
+            this.btn_Save.Size = new System.Drawing.Size(50, 22);
             this.btn_Save.TabIndex = 15;
             this.btn_Save.Text = "Save";
             this.btn_Save.UseVisualStyleBackColor = true;
@@ -117,9 +122,10 @@
             // rbtn_Sex2
             // 
             this.rbtn_Sex2.AutoSize = true;
-            this.rbtn_Sex2.Location = new System.Drawing.Point(302, 154);
+            this.rbtn_Sex2.Location = new System.Drawing.Point(151, 77);
+            this.rbtn_Sex2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rbtn_Sex2.Name = "rbtn_Sex2";
-            this.rbtn_Sex2.Size = new System.Drawing.Size(113, 28);
+            this.rbtn_Sex2.Size = new System.Drawing.Size(59, 16);
             this.rbtn_Sex2.TabIndex = 14;
             this.rbtn_Sex2.TabStop = true;
             this.rbtn_Sex2.Text = "Female";
@@ -128,9 +134,10 @@
             // rbtn_Sex1
             // 
             this.rbtn_Sex1.AutoSize = true;
-            this.rbtn_Sex1.Location = new System.Drawing.Point(208, 153);
+            this.rbtn_Sex1.Location = new System.Drawing.Point(104, 76);
+            this.rbtn_Sex1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rbtn_Sex1.Name = "rbtn_Sex1";
-            this.rbtn_Sex1.Size = new System.Drawing.Size(89, 28);
+            this.rbtn_Sex1.Size = new System.Drawing.Size(47, 16);
             this.rbtn_Sex1.TabIndex = 13;
             this.rbtn_Sex1.TabStop = true;
             this.rbtn_Sex1.Text = "Male";
@@ -138,90 +145,101 @@
             // 
             // nudown_Age
             // 
-            this.nudown_Age.Location = new System.Drawing.Point(629, 150);
+            this.nudown_Age.Location = new System.Drawing.Point(314, 75);
+            this.nudown_Age.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.nudown_Age.Name = "nudown_Age";
-            this.nudown_Age.Size = new System.Drawing.Size(120, 35);
+            this.nudown_Age.Size = new System.Drawing.Size(60, 21);
             this.nudown_Age.TabIndex = 12;
             // 
             // txt_Telephone
             // 
-            this.txt_Telephone.Location = new System.Drawing.Point(208, 226);
+            this.txt_Telephone.Location = new System.Drawing.Point(104, 113);
+            this.txt_Telephone.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txt_Telephone.Name = "txt_Telephone";
-            this.txt_Telephone.Size = new System.Drawing.Size(236, 35);
+            this.txt_Telephone.Size = new System.Drawing.Size(120, 21);
             this.txt_Telephone.TabIndex = 11;
             // 
             // txt_Address
             // 
-            this.txt_Address.Location = new System.Drawing.Point(629, 232);
+            this.txt_Address.Location = new System.Drawing.Point(314, 116);
+            this.txt_Address.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txt_Address.Name = "txt_Address";
-            this.txt_Address.Size = new System.Drawing.Size(243, 35);
+            this.txt_Address.Size = new System.Drawing.Size(124, 21);
             this.txt_Address.TabIndex = 9;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(510, 232);
+            this.label6.Location = new System.Drawing.Point(255, 116);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(94, 24);
+            this.label6.Size = new System.Drawing.Size(47, 12);
             this.label6.TabIndex = 8;
             this.label6.Text = "Address";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(525, 156);
+            this.label5.Location = new System.Drawing.Point(262, 78);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(46, 24);
+            this.label5.Size = new System.Drawing.Size(23, 12);
             this.label5.TabIndex = 6;
             this.label5.Text = "Age";
             // 
             // txt_Company
             // 
-            this.txt_Company.Location = new System.Drawing.Point(629, 62);
+            this.txt_Company.Location = new System.Drawing.Point(314, 31);
+            this.txt_Company.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txt_Company.Name = "txt_Company";
-            this.txt_Company.Size = new System.Drawing.Size(243, 35);
+            this.txt_Company.Size = new System.Drawing.Size(124, 21);
             this.txt_Company.TabIndex = 5;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(510, 62);
+            this.label4.Location = new System.Drawing.Point(255, 31);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(94, 24);
+            this.label4.Size = new System.Drawing.Size(47, 12);
             this.label4.TabIndex = 4;
             this.label4.Text = "Company";
             // 
             // txt_Name
             // 
-            this.txt_Name.Location = new System.Drawing.Point(208, 62);
+            this.txt_Name.Location = new System.Drawing.Point(104, 31);
+            this.txt_Name.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txt_Name.Name = "txt_Name";
-            this.txt_Name.Size = new System.Drawing.Size(236, 35);
+            this.txt_Name.Size = new System.Drawing.Size(120, 21);
             this.txt_Name.TabIndex = 3;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(84, 232);
+            this.label3.Location = new System.Drawing.Point(42, 116);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(118, 24);
+            this.label3.Size = new System.Drawing.Size(59, 12);
             this.label3.TabIndex = 2;
             this.label3.Text = "Telephone";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(89, 147);
+            this.label2.Location = new System.Drawing.Point(44, 74);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 24);
+            this.label2.Size = new System.Drawing.Size(23, 12);
             this.label2.TabIndex = 1;
             this.label2.Text = "Sex";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(89, 62);
+            this.label1.Location = new System.Drawing.Point(44, 31);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 24);
+            this.label1.Size = new System.Drawing.Size(29, 12);
             this.label1.TabIndex = 0;
             this.label1.Text = "Name";
             // 
@@ -230,9 +248,11 @@
             this.groupBox2.Controls.Add(this.lv_Customer);
             this.groupBox2.Controls.Add(this.lbl_Note);
             this.groupBox2.Controls.Add(this.btn_Del);
-            this.groupBox2.Location = new System.Drawing.Point(43, 413);
+            this.groupBox2.Location = new System.Drawing.Point(22, 206);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(970, 557);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Size = new System.Drawing.Size(485, 278);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Customer information list";
@@ -250,10 +270,11 @@
             this.lv_Customer.FullRowSelect = true;
             this.lv_Customer.GridLines = true;
             this.lv_Customer.HideSelection = false;
-            this.lv_Customer.Location = new System.Drawing.Point(21, 35);
+            this.lv_Customer.Location = new System.Drawing.Point(10, 18);
+            this.lv_Customer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.lv_Customer.MultiSelect = false;
             this.lv_Customer.Name = "lv_Customer";
-            this.lv_Customer.Size = new System.Drawing.Size(931, 503);
+            this.lv_Customer.Size = new System.Drawing.Size(468, 254);
             this.lv_Customer.TabIndex = 19;
             this.lv_Customer.UseCompatibleStateImageBehavior = false;
             this.lv_Customer.View = System.Windows.Forms.View.Details;
@@ -293,30 +314,34 @@
             // lbl_Note
             // 
             this.lbl_Note.AutoSize = true;
-            this.lbl_Note.Location = new System.Drawing.Point(474, 0);
+            this.lbl_Note.Location = new System.Drawing.Point(237, 0);
+            this.lbl_Note.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_Note.Name = "lbl_Note";
-            this.lbl_Note.Size = new System.Drawing.Size(82, 24);
+            this.lbl_Note.Size = new System.Drawing.Size(41, 12);
             this.lbl_Note.TabIndex = 18;
             this.lbl_Note.Text = "label7";
             // 
             // btn_Del
             // 
-            this.btn_Del.Location = new System.Drawing.Point(322, -12);
+            this.btn_Del.Location = new System.Drawing.Point(161, -6);
+            this.btn_Del.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_Del.Name = "btn_Del";
-            this.btn_Del.Size = new System.Drawing.Size(122, 49);
+            this.btn_Del.Size = new System.Drawing.Size(61, 24);
             this.btn_Del.TabIndex = 0;
             this.btn_Del.Text = "Delete";
             this.btn_Del.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1049, 1002);
+            this.ClientSize = new System.Drawing.Size(524, 501);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudown_Age)).EndInit();
