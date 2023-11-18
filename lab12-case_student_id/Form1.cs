@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.Remoting;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -101,6 +102,27 @@ namespace lab12_case_student_id
         private void Form1_Load(object sender, EventArgs e)
         {
             DataBind_Customer();
+        }
+
+        private string customerid = "";
+
+        private void lv_Customer_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (lv_Customer.SelectedItems.Count > 0)
+            {
+                ListViewItem myitem = lv_Customer.SelectedItems[0];
+
+                customerid = myitem.SubItems[0].Text;
+                txt_Name.Text = myitem.SubItems[1].Text;
+                txt_Company.Text = myitem.SubItems[2].Text;
+                rbtn_Sex1.Checked = myitem.SubItems[3].Text == "M" ? true : false;
+                rbtn_Sex2.Checked = !rbtn_Sex1.Checked;
+                nudown_Age.Value = decimal.Parse(myitem.SubItems[4].Text);
+                txt_Telephone.Text = myitem.SubItems[5].Text;
+                txt_Address.Text = myitem.SubItems[6].Text;
+
+                lbl_Status.Text = "Modify";
+            }
         }
     }
 }

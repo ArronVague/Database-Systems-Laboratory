@@ -278,6 +278,7 @@
             this.lv_Customer.TabIndex = 19;
             this.lv_Customer.UseCompatibleStateImageBehavior = false;
             this.lv_Customer.View = System.Windows.Forms.View.Details;
+            this.lv_Customer.SelectedIndexChanged += new System.EventHandler(this.lv_Customer_SelectedIndexChanged);
             // 
             // columnHeader1
             // 
