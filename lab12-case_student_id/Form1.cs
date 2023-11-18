@@ -62,6 +62,7 @@ namespace lab12_case_student_id
                     lbl_Note.ForeColor = Color.Blue;
                     lbl_Note.Text = "Added successfully!";
                     ClearTextBox();
+                    DataBind_Customer();
                 }
                 else
                 {
