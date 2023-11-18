@@ -183,5 +183,11 @@ namespace lab12_case_student_id
                 }
             }
         }
+
+        private void btn_Cancel_Click(object sender, EventArgs e)
+        {
+            ClearTextBox();
+            lbl_Note.Text = "";
+        }
     }
 }
