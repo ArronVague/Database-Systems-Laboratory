@@ -1,4 +1,4 @@
--- Active: 1700816473701@@gz-cynosdbmysql-grp-04b3z61j.sql.tencentcdb.com@20464@eas_db
+-- Active: 1701051173366@@gz-cynosdbmysql-grp-04b3z61j.sql.tencentcdb.com@20464@eas_db
 CREATE PROCEDURE getAvgScore(sn VARCHAR(10), out avgs NUMERIC(5, 2))
 SELECT
     AVG(Score)
@@ -109,3 +109,33 @@ SET
     `SName` = 'ddd'
 WHERE
     `SNo` = '20220103';
+
+CREATE TRIGGER sum_score
+AFTER
+INSERT
+    ON score_info FOR EACH ROW BEGIN
+UPDATE
+    student_info
+SET
+    Scores = Scores + NEW.Score
+WHERE
+    SNo = NEW.SNo;
+
+END
+INSERT INTO
+    score_info
+VALUES
+    ('20200101', 5, 90);
+
+SELECT
+    *
+FROM
+    student_info;
+
+CREATE TRIGGER del_student_score BEFORE DELETE ON student_info FOR EACH ROW BEGIN
+DELETE FROM
+    score_info
+WHERE
+    SNo = OLD.SNo;
+
+END;
