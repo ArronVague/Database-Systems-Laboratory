@@ -6,6 +6,7 @@ A repo to store something of database systems lab
 If you want to use `.net` code, please create a file name `config.ini`, and add your own MySql information such as:
 
 ```ini
+[mysql]
 server = "your server"
 database = "the database you want to use"
 UID = "user"
