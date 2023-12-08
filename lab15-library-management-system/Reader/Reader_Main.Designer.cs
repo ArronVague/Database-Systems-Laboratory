@@ -1,6 +1,6 @@
-﻿namespace lab15_library_management_system.Administrator
+﻿namespace lab15_library_management_system.Reader
 {
-    partial class Administrator_Main
+    partial class Reader_Main
     {
         /// <summary>
         /// Required designer variable.
@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Administrator_Main";
+            this.Text = "Reader_Main";
         }
 
         #endregion

@@ -1,4 +1,6 @@
-﻿using MySql.Data.MySqlClient;
+﻿using lab15_library_management_system.Administrator;
+using lab15_library_management_system.Reader;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -57,8 +59,8 @@ namespace lab15_library_management_system
 
             // 确认下拉框身份，来决定从哪张表中查询
             string category = Cb_Category.Text.Trim();
-            string table = "";
-            string table_id = "";
+            string table;
+            string table_id;
 
             if (category == "administrator")
             {
@@ -73,7 +75,7 @@ namespace lab15_library_management_system
 
             string ID = Txt_ID.Text.Trim();
 
-            string query = string.Format("SELECT * FROM {0} WHERE {1}='{2}'", table, table, ID);
+            string query = string.Format("SELECT * FROM {0} WHERE {1}='{2}'", table, table_id, ID);
 
             MySqlConnection conn = Database.GetMySqlConnection();
             conn.Open();
@@ -96,8 +98,17 @@ namespace lab15_library_management_system
             }
 
             this.Hide();
-            Frm_Main frm = new Frm_Main();
-            frm.Show();
+            
+            if (category == "administrator")
+            {
+                Administrator_Main administrator_Main = new Administrator_Main();
+                administrator_Main.Show();
+            }
+            else
+            {
+                Reader_Main reader_Main = new Reader_Main();
+                reader_Main.Show();
+            }
         }
     }
 }
