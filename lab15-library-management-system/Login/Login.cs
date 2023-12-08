@@ -27,6 +27,8 @@ namespace lab15_library_management_system
             DataTable dt = new DataTable();
             da.Fill(dt);
             conn.Close();
+            // 管理员身份不属于读者类别，但是需要显示在下拉框中
+            dt.Rows.Add(0, "administrator");
             Cb_Category.DataSource = dt;
             Cb_Category.DisplayMember = "name";
             Cb_Category.ValueMember = "Cid";
@@ -35,6 +37,67 @@ namespace lab15_library_management_system
         private void Login_Load(object sender, EventArgs e)
         {
             Databind_Category();
+        }
+
+        private void Btn_Login_Click(object sender, EventArgs e)
+        {
+            if (Txt_ID.Text.Trim().Length == 0)
+            {
+                MessageBox.Show("Please enter ID!");
+                Txt_ID.Focus();
+                return;
+            }
+
+            if (Txt_Password.Text.Trim().Length == 0)
+            {
+                MessageBox.Show("Please enter password!");
+                Txt_Password.Focus();
+                return;
+            }
+
+            // 确认下拉框身份，来决定从哪张表中查询
+            string category = Cb_Category.Text.Trim();
+            string table = "";
+            string table_id = "";
+
+            if (category == "administrator")
+            {
+                table = "administrator_information";
+                table_id = "Aid";
+            }
+            else
+            {
+                table = "reader_information";
+                table_id = "Rid";
+            }
+
+            string ID = Txt_ID.Text.Trim();
+
+            string query = string.Format("SELECT * FROM {0} WHERE {1}='{2}'", table, table, ID);
+
+            MySqlConnection conn = Database.GetMySqlConnection();
+            conn.Open();
+            MySqlDataAdapter da = new MySqlDataAdapter(query, conn);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            conn.Close();
+
+            if (dt.Rows.Count == 0)
+            {
+                MessageBox.Show("ID does not exist!");
+                return;
+            }
+
+            string password = Txt_Password.Text.Trim();
+            if (dt.Rows[0]["password"].ToString() != password)
+            {
+                MessageBox.Show("Wrong password!");
+                return;
+            }
+
+            this.Hide();
+            Frm_Main frm = new Frm_Main();
+            frm.Show();
         }
     }
 }
