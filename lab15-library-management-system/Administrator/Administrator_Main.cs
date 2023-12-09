@@ -30,7 +30,8 @@ namespace lab15_library_management_system.Administrator
             this.Hide();
             Reader_Management reader_Management = new Reader_Management();
             reader_Management.administrator_id = administrator_id;
-            reader_Management.Show();
+            reader_Management.ShowDialog();
+            this.Show();
         }
     }
 }

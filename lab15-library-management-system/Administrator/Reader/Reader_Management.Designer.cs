@@ -45,6 +45,7 @@
             this.Btn_Return.TabIndex = 7;
             this.Btn_Return.Text = "Return";
             this.Btn_Return.UseVisualStyleBackColor = true;
+            this.Btn_Return.Click += new System.EventHandler(this.Btn_Return_Click);
             // 
             // Btn_Information_Management
             // 

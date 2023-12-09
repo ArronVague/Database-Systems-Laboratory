@@ -33,5 +33,10 @@ namespace lab15_library_management_system.Administrator.Reader
         {
             Lbl_Administrator_ID.Text = administrator_id;
         }
+
+        private void Btn_Return_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
