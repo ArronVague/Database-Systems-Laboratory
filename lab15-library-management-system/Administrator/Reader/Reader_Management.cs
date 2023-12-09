@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using lab15_library_management_system.Administrator.Reader.Category;
+using lab15_library_management_system.Administrator.Reader.Information;
 
 namespace lab15_library_management_system.Administrator.Reader
 {
@@ -37,6 +38,15 @@ namespace lab15_library_management_system.Administrator.Reader
         private void Btn_Return_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void Btn_Information_Management_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Information_Management information_Management = new Information_Management();
+            information_Management.administrator_id = administrator_id;
+            information_Management.ShowDialog();
+            this.Show();
         }
     }
 }

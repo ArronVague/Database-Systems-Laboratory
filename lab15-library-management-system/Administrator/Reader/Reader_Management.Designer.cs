@@ -55,6 +55,7 @@
             this.Btn_Information_Management.TabIndex = 6;
             this.Btn_Information_Management.Text = "Information management";
             this.Btn_Information_Management.UseVisualStyleBackColor = true;
+            this.Btn_Information_Management.Click += new System.EventHandler(this.Btn_Information_Management_Click);
             // 
             // Btn_Category_Management
             // 
