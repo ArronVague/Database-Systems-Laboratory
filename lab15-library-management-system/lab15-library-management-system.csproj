@@ -62,6 +62,12 @@
     <Compile Include="Administrator\Reader\Category\Category_Management.Designer.cs">
       <DependentUpon>Category_Management.cs</DependentUpon>
     </Compile>
+    <Compile Include="Administrator\Reader\Information\Information_Management.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrator\Reader\Information\Information_Management.Designer.cs">
+      <DependentUpon>Information_Management.cs</DependentUpon>
+    </Compile>
     <Compile Include="Administrator\Reader\Reader_Management.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +94,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Administrator\Reader\Category\Category_Management.resx">
       <DependentUpon>Category_Management.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrator\Reader\Information\Information_Management.resx">
+      <DependentUpon>Information_Management.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Administrator\Reader\Reader_Management.resx">
       <DependentUpon>Reader_Management.cs</DependentUpon>
