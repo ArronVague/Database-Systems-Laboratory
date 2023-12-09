@@ -56,6 +56,18 @@
     <Compile Include="Administrator\Administrator_Main.Designer.cs">
       <DependentUpon>Administrator_Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="Administrator\Reader\Category\Category_Management.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrator\Reader\Category\Category_Management.Designer.cs">
+      <DependentUpon>Category_Management.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrator\Reader\Reader_Management.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrator\Reader\Reader_Management.Designer.cs">
+      <DependentUpon>Reader_Management.cs</DependentUpon>
+    </Compile>
     <Compile Include="Database.cs" />
     <Compile Include="Login\Login.cs">
       <SubType>Form</SubType>
@@ -71,6 +83,15 @@
     <Compile Include="Reader\Reader_Main.Designer.cs">
       <DependentUpon>Reader_Main.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Administrator\Administrator_Main.resx">
+      <DependentUpon>Administrator_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrator\Reader\Category\Category_Management.resx">
+      <DependentUpon>Category_Management.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrator\Reader\Reader_Management.resx">
+      <DependentUpon>Reader_Management.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>

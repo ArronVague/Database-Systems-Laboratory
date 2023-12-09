@@ -102,6 +102,7 @@ namespace lab15_library_management_system
             if (category == "administrator")
             {
                 Administrator_Main administrator_Main = new Administrator_Main();
+                administrator_Main.administrator_id = dt.Rows[0]["Aid"].ToString();
                 administrator_Main.Show();
             }
             else
