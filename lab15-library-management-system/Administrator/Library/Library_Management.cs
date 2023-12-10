@@ -33,5 +33,10 @@ namespace lab15_library_management_system.Administrator.Library
             publishing_House_Information_Management.ShowDialog();
             this.Show();
         }
+
+        private void Library_Management_Load(object sender, EventArgs e)
+        {
+            Lbl_Administrator_ID.Text = administrator_id;
+        }
     }
 }

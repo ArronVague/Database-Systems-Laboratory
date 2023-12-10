@@ -111,6 +111,7 @@
             this.Controls.Add(this.statusStrip1);
             this.Name = "Library_Management";
             this.Text = "Library_Management";
+            this.Load += new System.EventHandler(this.Library_Management_Load);
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
