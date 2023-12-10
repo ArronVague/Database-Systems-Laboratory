@@ -46,4 +46,16 @@ VALUES
 SELECT
     *
 FROM
-    reader_category
+    reader_category;
+
+INSERT INTO
+    publisher_information
+VALUES
+    (
+        NULL,
+        'name',
+        'person',
+        'number',
+        'fax',
+        'address'
+    );
