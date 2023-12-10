@@ -59,3 +59,135 @@ VALUES
         'fax',
         'address'
     );
+
+CREATE TRIGGER `update_basic_information_books`
+AFTER
+UPDATE
+    ON book_collection_information FOR EACH ROW BEGIN
+UPDATE
+    basic_information_books
+SET
+    quantity = (
+        SELECT
+            COUNT(*)
+        FROM
+            book_collection_information
+        WHERE
+            book_collection_information.`ISBN` = NEW.`ISBN`
+            AND book_collection_information.status = 'not lent'
+    ),
+    total = (
+        SELECT
+            COUNT(*)
+        FROM
+            book_collection_information
+        WHERE
+            book_collection_information.`ISBN` = NEW.`ISBN`
+    )
+WHERE
+    `ISBN` = NEW.`ISBN`;
+
+UPDATE
+    basic_information_books
+SET
+    quantity = (
+        SELECT
+            COUNT(*)
+        FROM
+            book_collection_information
+        WHERE
+            book_collection_information.`ISBN` = OLD.`ISBN`
+            AND book_collection_information.status = 'not lent'
+    ),
+    total = (
+        SELECT
+            COUNT(*)
+        FROM
+            book_collection_information
+        WHERE
+            book_collection_information.`ISBN` = OLD.`ISBN`
+    )
+WHERE
+    `ISBN` = OLD.`ISBN`;
+
+END;
+
+UPDATE
+    basic_information_books
+SET
+    quantity = (
+        SELECT
+            COUNT(*)
+        FROM
+            book_collection_information
+        WHERE
+            book_collection_information.`ISBN` = 2
+            AND book_collection_information.status = 'not lent'
+    ),
+    total = (
+        SELECT
+            COUNT(*)
+        FROM
+            book_collection_information
+        WHERE
+            book_collection_information.`ISBN` = 2
+    )
+WHERE
+    `ISBN` = 2;
+
+CREATE TRIGGER `insert_basic_information_books`
+AFTER
+INSERT
+    ON book_collection_information FOR EACH ROW BEGIN
+UPDATE
+    basic_information_books
+SET
+    quantity = (
+        SELECT
+            COUNT(*)
+        FROM
+            book_collection_information
+        WHERE
+            book_collection_information.`ISBN` = NEW.`ISBN`
+            AND book_collection_information.status = 'not lent'
+    ),
+    total = (
+        SELECT
+            COUNT(*)
+        FROM
+            book_collection_information
+        WHERE
+            book_collection_information.`ISBN` = NEW.`ISBN`
+    )
+WHERE
+    `ISBN` = NEW.`ISBN`;
+
+END;
+
+CREATE TRIGGER `delete_basic_information_books`
+AFTER
+    DELETE ON book_collection_information FOR EACH ROW BEGIN
+UPDATE
+    basic_information_books
+SET
+    quantity = (
+        SELECT
+            COUNT(*)
+        FROM
+            book_collection_information
+        WHERE
+            book_collection_information.`ISBN` = OLD.`ISBN`
+            AND book_collection_information.status = 'not lent'
+    ),
+    total = (
+        SELECT
+            COUNT(*)
+        FROM
+            book_collection_information
+        WHERE
+            book_collection_information.`ISBN` = OLD.`ISBN`
+    )
+WHERE
+    `ISBN` = OLD.`ISBN`;
+
+END;
