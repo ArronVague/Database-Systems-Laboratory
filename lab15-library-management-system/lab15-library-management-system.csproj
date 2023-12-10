@@ -62,6 +62,12 @@
     <Compile Include="Administrator\Library\Library_Management.Designer.cs">
       <DependentUpon>Library_Management.cs</DependentUpon>
     </Compile>
+    <Compile Include="Administrator\Library\PublishingHouse\Publishing_House_Information_Management.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrator\Library\PublishingHouse\Publishing_House_Information_Management.Designer.cs">
+      <DependentUpon>Publishing_House_Information_Management.cs</DependentUpon>
+    </Compile>
     <Compile Include="Administrator\Reader\Category\Category_Management.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +106,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Administrator\Library\Library_Management.resx">
       <DependentUpon>Library_Management.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrator\Library\PublishingHouse\Publishing_House_Information_Management.resx">
+      <DependentUpon>Publishing_House_Information_Management.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Administrator\Reader\Category\Category_Management.resx">
       <DependentUpon>Category_Management.cs</DependentUpon>

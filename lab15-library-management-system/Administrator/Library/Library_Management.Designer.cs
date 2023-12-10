@@ -65,6 +65,7 @@
             this.Btn_Publishing_house_information_management.TabIndex = 9;
             this.Btn_Publishing_house_information_management.Text = "Publishing house information management";
             this.Btn_Publishing_house_information_management.UseVisualStyleBackColor = true;
+            this.Btn_Publishing_house_information_management.Click += new System.EventHandler(this.Btn_Publishing_house_information_management_Click);
             // 
             // statusStrip1
             // 

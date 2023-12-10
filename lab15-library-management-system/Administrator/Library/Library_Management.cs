@@ -1,4 +1,5 @@
-﻿using System;
+﻿using lab15_library_management_system.Administrator.Library.PublishingHouse;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -22,6 +23,15 @@ namespace lab15_library_management_system.Administrator.Library
         private void Btn_Return_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void Btn_Publishing_house_information_management_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Publishing_House_Information_Management publishing_House_Information_Management = new Publishing_House_Information_Management();
+            publishing_House_Information_Management.administrator_id = administrator_id;
+            publishing_House_Information_Management.ShowDialog();
+            this.Show();
         }
     }
 }
