@@ -78,6 +78,7 @@
             this.Btn_Library_Management.TabIndex = 2;
             this.Btn_Library_Management.Text = "Library management";
             this.Btn_Library_Management.UseVisualStyleBackColor = true;
+            this.Btn_Library_Management.Click += new System.EventHandler(this.Btn_Library_Management_Click);
             // 
             // Btn_Business_Management
             // 

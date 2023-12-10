@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using lab15_library_management_system.Administrator.Library;
 using lab15_library_management_system.Administrator.Reader;
 
 namespace lab15_library_management_system.Administrator
@@ -31,6 +32,15 @@ namespace lab15_library_management_system.Administrator
             Reader_Management reader_Management = new Reader_Management();
             reader_Management.administrator_id = administrator_id;
             reader_Management.ShowDialog();
+            this.Show();
+        }
+
+        private void Btn_Library_Management_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Library_Management library_Management = new Library_Management();
+            library_Management.administrator_id = administrator_id;
+            library_Management.ShowDialog();
             this.Show();
         }
     }
