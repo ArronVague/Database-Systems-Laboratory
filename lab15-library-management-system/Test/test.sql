@@ -191,3 +191,38 @@ WHERE
     `ISBN` = OLD.`ISBN`;
 
 END;
+
+INSERT INTO
+    basic_information_books
+VALUES
+    (
+        'ISBN',
+        7,
+        'name',
+        'type',
+        'author',
+        'edition',
+        '2022/12/12',
+        10.0,
+        'introduction',
+        1,
+        1
+    );
+
+SELECT
+    ISBN,
+    publisher_information.name AS publisher,
+    basic_information_books.name,
+    TYPE,
+    author,
+    edition,
+    publication_date,
+    price,
+    introduction,
+    quantity,
+    total
+FROM
+    basic_information_books,
+    publisher_information
+WHERE
+    basic_information_books.`id` = publisher_information.`id`;
