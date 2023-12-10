@@ -56,6 +56,7 @@
             this.Btn_Basic_information_management_of_books.TabIndex = 10;
             this.Btn_Basic_information_management_of_books.Text = "Basic information management of books";
             this.Btn_Basic_information_management_of_books.UseVisualStyleBackColor = true;
+            this.Btn_Basic_information_management_of_books.Click += new System.EventHandler(this.Btn_Basic_information_management_of_books_Click);
             // 
             // Btn_Publishing_house_information_management
             // 

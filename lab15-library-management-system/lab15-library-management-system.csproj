@@ -56,6 +56,12 @@
     <Compile Include="Administrator\Administrator_Main.Designer.cs">
       <DependentUpon>Administrator_Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="Administrator\Library\Basic\Basic_Management.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrator\Library\Basic\Basic_Management.Designer.cs">
+      <DependentUpon>Basic_Management.cs</DependentUpon>
+    </Compile>
     <Compile Include="Administrator\Library\Library_Management.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,6 +109,9 @@
     </Compile>
     <EmbeddedResource Include="Administrator\Administrator_Main.resx">
       <DependentUpon>Administrator_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrator\Library\Basic\Basic_Management.resx">
+      <DependentUpon>Basic_Management.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Administrator\Library\Library_Management.resx">
       <DependentUpon>Library_Management.cs</DependentUpon>

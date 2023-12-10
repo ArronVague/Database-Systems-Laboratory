@@ -1,4 +1,5 @@
 ﻿using lab15_library_management_system.Administrator.Library.PublishingHouse;
+using lab15_library_management_system.Administrator.Library.Basic;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -37,6 +38,15 @@ namespace lab15_library_management_system.Administrator.Library
         private void Library_Management_Load(object sender, EventArgs e)
         {
             Lbl_Administrator_ID.Text = administrator_id;
+        }
+
+        private void Btn_Basic_information_management_of_books_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Basic_Management basic_Management = new Basic_Management();
+            basic_Management.administrator_id = administrator_id;
+            basic_Management.ShowDialog();
+            this.Show();
         }
     }
 }
