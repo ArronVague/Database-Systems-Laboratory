@@ -226,3 +226,20 @@ FROM
     publisher_information
 WHERE
     basic_information_books.`id` = publisher_information.`id`;
+
+UPDATE
+    basic_information_books
+SET
+    `ISBN` = '11',
+    `id` = 7,
+    `name` = '',
+    `TYPE` = '',
+    `author` = '',
+    `edition` = '',
+    `publication_date` = NULL,
+    `price` = 0,
+    `introduction` = '',
+    `quantity` = 0,
+    `total` = 0
+WHERE
+    `ISBN` = '11'
