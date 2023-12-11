@@ -44,9 +44,12 @@
             this.lbl_Note = new System.Windows.Forms.Label();
             this.btn_Del = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.Txt_Name = new System.Windows.Forms.TextBox();
+            this.Txt_Introduction = new System.Windows.Forms.TextBox();
             this.Nudown_Total = new System.Windows.Forms.NumericUpDown();
             this.label13 = new System.Windows.Forms.Label();
             this.Txt_ISBN = new System.Windows.Forms.TextBox();
+            this.Txt_Price = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.Txt_Publication_Date = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -55,7 +58,6 @@
             this.Txt_Author = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.Txt_Publishing_House = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.Btn_Category_Management_Return = new System.Windows.Forms.Button();
             this.Nudown_Quantity = new System.Windows.Forms.NumericUpDown();
@@ -72,9 +74,7 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.Lbl_Administrator_ID = new System.Windows.Forms.ToolStripStatusLabel();
-            this.Txt_Price = new System.Windows.Forms.TextBox();
-            this.Txt_Introduction = new System.Windows.Forms.TextBox();
-            this.Txt_Name = new System.Windows.Forms.TextBox();
+            this.Cb_ph = new System.Windows.Forms.ComboBox();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Nudown_Total)).BeginInit();
@@ -190,6 +190,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.Cb_ph);
             this.groupBox1.Controls.Add(this.Txt_Name);
             this.groupBox1.Controls.Add(this.Txt_Introduction);
             this.groupBox1.Controls.Add(this.Nudown_Total);
@@ -204,7 +205,6 @@
             this.groupBox1.Controls.Add(this.Txt_Author);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.Txt_Publishing_House);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.Btn_Category_Management_Return);
             this.groupBox1.Controls.Add(this.Nudown_Quantity);
@@ -224,6 +224,22 @@
             this.groupBox1.TabIndex = 18;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Edit reader information  Status:";
+            // 
+            // Txt_Name
+            // 
+            this.Txt_Name.Location = new System.Drawing.Point(113, 83);
+            this.Txt_Name.Margin = new System.Windows.Forms.Padding(2);
+            this.Txt_Name.Name = "Txt_Name";
+            this.Txt_Name.Size = new System.Drawing.Size(124, 21);
+            this.Txt_Name.TabIndex = 44;
+            // 
+            // Txt_Introduction
+            // 
+            this.Txt_Introduction.Location = new System.Drawing.Point(357, 80);
+            this.Txt_Introduction.Margin = new System.Windows.Forms.Padding(2);
+            this.Txt_Introduction.Name = "Txt_Introduction";
+            this.Txt_Introduction.Size = new System.Drawing.Size(124, 21);
+            this.Txt_Introduction.TabIndex = 43;
             // 
             // Nudown_Total
             // 
@@ -255,6 +271,14 @@
             this.Txt_ISBN.Name = "Txt_ISBN";
             this.Txt_ISBN.Size = new System.Drawing.Size(124, 21);
             this.Txt_ISBN.TabIndex = 40;
+            // 
+            // Txt_Price
+            // 
+            this.Txt_Price.Location = new System.Drawing.Point(357, 50);
+            this.Txt_Price.Margin = new System.Windows.Forms.Padding(2);
+            this.Txt_Price.Name = "Txt_Price";
+            this.Txt_Price.Size = new System.Drawing.Size(124, 21);
+            this.Txt_Price.TabIndex = 33;
             // 
             // label10
             // 
@@ -328,14 +352,6 @@
             this.label6.Size = new System.Drawing.Size(29, 12);
             this.label6.TabIndex = 24;
             this.label6.Text = "Name";
-            // 
-            // Txt_Publishing_House
-            // 
-            this.Txt_Publishing_House.Location = new System.Drawing.Point(113, 50);
-            this.Txt_Publishing_House.Margin = new System.Windows.Forms.Padding(2);
-            this.Txt_Publishing_House.Name = "Txt_Publishing_House";
-            this.Txt_Publishing_House.Size = new System.Drawing.Size(124, 21);
-            this.Txt_Publishing_House.TabIndex = 23;
             // 
             // label3
             // 
@@ -492,29 +508,14 @@
             this.Lbl_Administrator_ID.Size = new System.Drawing.Size(151, 20);
             this.Lbl_Administrator_ID.Text = "toolStripStatusLabel2";
             // 
-            // Txt_Price
+            // Cb_ph
             // 
-            this.Txt_Price.Location = new System.Drawing.Point(357, 50);
-            this.Txt_Price.Margin = new System.Windows.Forms.Padding(2);
-            this.Txt_Price.Name = "Txt_Price";
-            this.Txt_Price.Size = new System.Drawing.Size(124, 21);
-            this.Txt_Price.TabIndex = 33;
-            // 
-            // Txt_Introduction
-            // 
-            this.Txt_Introduction.Location = new System.Drawing.Point(357, 80);
-            this.Txt_Introduction.Margin = new System.Windows.Forms.Padding(2);
-            this.Txt_Introduction.Name = "Txt_Introduction";
-            this.Txt_Introduction.Size = new System.Drawing.Size(124, 21);
-            this.Txt_Introduction.TabIndex = 43;
-            // 
-            // Txt_Name
-            // 
-            this.Txt_Name.Location = new System.Drawing.Point(113, 83);
-            this.Txt_Name.Margin = new System.Windows.Forms.Padding(2);
-            this.Txt_Name.Name = "Txt_Name";
-            this.Txt_Name.Size = new System.Drawing.Size(124, 21);
-            this.Txt_Name.TabIndex = 44;
+            this.Cb_ph.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Cb_ph.FormattingEnabled = true;
+            this.Cb_ph.Location = new System.Drawing.Point(116, 53);
+            this.Cb_ph.Name = "Cb_ph";
+            this.Cb_ph.Size = new System.Drawing.Size(121, 20);
+            this.Cb_ph.TabIndex = 45;
             // 
             // Basic_Management
             // 
@@ -553,7 +554,6 @@
         private System.Windows.Forms.Label lbl_Note;
         private System.Windows.Forms.Button btn_Del;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox Txt_Publishing_House;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button Btn_Category_Management_Return;
         private System.Windows.Forms.NumericUpDown Nudown_Quantity;
@@ -591,5 +591,6 @@
         private System.Windows.Forms.TextBox Txt_Price;
         private System.Windows.Forms.TextBox Txt_Introduction;
         private System.Windows.Forms.TextBox Txt_Name;
+        private System.Windows.Forms.ComboBox Cb_ph;
     }
 }

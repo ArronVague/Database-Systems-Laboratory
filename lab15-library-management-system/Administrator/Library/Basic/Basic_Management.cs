@@ -63,20 +63,21 @@ namespace lab15_library_management_system.Administrator.Library.Basic
                 myitem.SubItems.Add(dr["author"].ToString());
                 myitem.SubItems.Add(dr["edition"].ToString());
                 // 日期格式为yyyy/MM/dd
-                myitem.SubItems.Add(DateTime.Parse(dr["publication_date"].ToString()).ToString("yyyy/MM/dd"));
-                myitem.SubItems.Add(dr["price"].ToString());
-                myitem.SubItems.Add(dr["introduction"].ToString());
-                myitem.SubItems.Add(dr["quantity"].ToString());
-                myitem.SubItems.Add(dr["total"].ToString());
-/*                if (dr["valid"].ToString() == "")
+                if (dr["publication_date"].ToString() == "")
                 {
                     myitem.SubItems.Add("");
                 }
                 else
                 {
                     // 日期格式为yyyy/MM/dd
-                    myitem.SubItems.Add(DateTime.Parse(dr["valid"].ToString()).ToString("yyyy/MM/dd"));
-                }   */
+                    myitem.SubItems.Add(DateTime.Parse(dr["publication_date"].ToString()).ToString("yyyy/MM/dd"));
+                }
+                /*myitem.SubItems.Add(DateTime.Parse(dr["publication_date"].ToString()).ToString("yyyy/MM/dd"));*/
+                myitem.SubItems.Add(dr["price"].ToString());
+                myitem.SubItems.Add(dr["introduction"].ToString());
+                myitem.SubItems.Add(dr["quantity"].ToString());
+                myitem.SubItems.Add(dr["total"].ToString());
+                
                 lv_Customer.Items.Add(myitem);
             }
         }
@@ -84,6 +85,7 @@ namespace lab15_library_management_system.Administrator.Library.Basic
         private void Information_Management_Load(object sender, EventArgs e)
         {
             DataBind_Customer();
+            Databind_Publishing_House();
             ClearTextBox();
             Lbl_Administrator_ID.Text = administrator_id;
         }
@@ -117,7 +119,7 @@ namespace lab15_library_management_system.Administrator.Library.Basic
                 quantity,
                 total*/
             Txt_ISBN.Clear();
-            Txt_Publishing_House.Clear();
+            Cb_ph.SelectedIndex = 0;
             Txt_Name.Clear();
             Txt_Type.Clear();
             Txt_Author.Clear();
@@ -133,8 +135,8 @@ namespace lab15_library_management_system.Administrator.Library.Basic
 
         private void btn_Save_Click(object sender, EventArgs e)
         {
-/*            string ISBN = Txt_ISBN.Text.Trim();
-            string publishing_house = Txt_Publishing_House.Text.Trim();
+            string ISBN = Txt_ISBN.Text.Trim();
+            string publishing_house = Cb_ph.SelectedValue.ToString();
             string name = Txt_Type.Text.Trim();
             string type = Txt_Type.Text.Trim();
             string author = Txt_Author.Text.Trim();
@@ -145,34 +147,34 @@ namespace lab15_library_management_system.Administrator.Library.Basic
             string quantity = Nudown_Quantity.Value.ToString();
             string total = Nudown_Total.Value.ToString();
 
-            if (ID.Length == 0)
+            if (ISBN.Length == 0)
             {
                 lbl_Note.ForeColor = Color.Red;
-                lbl_Note.Text = "The ID cannot be empty!";
+                lbl_Note.Text = "The ISBN cannot be empty!";
                 Txt_ISBN.Focus();
                 return;
             }
 
-            if (registration.Length == 0)
+            if (price.Length == 0)
             {
-                lbl_Note.ForeColor = Color.Red;
-                lbl_Note.Text = "The registration cannot be empty!";
-                Txt_Publication_Date.Focus();
-                return;
+                price = "0";
             }
 
-            if (valid.Length == 0)
+            if (publication_date.Length == 0)
             {
-                valid = "NULL";
+                publication_date = "NULL";
             }
             else
             {
-                valid = "'" + valid + "'";
+                publication_date = "'" + publication_date + "'";
             }
 
             if (Lbl_Status.Text == "Add")
             {
-                string query = string.Format("INSERT INTO reader_information VALUES ({0},'{1}',{2},'{3}','{4}','{5}','{6}',{7},{8},{9},{10},{11},'{12}')", ID, password, category, name, gender, number, registration, valid, currently, cumulative, loss, violations, remark);
+                string query = string.Format("INSERT INTO basic_information_books VALUES ('{0}',{1},'{2}','{3}','{4}','{5}',{6},{7},'{8}',{9},{10})", ISBN, publishing_house, name, type, author, edition, publication_date, price, introduction, quantity, total);
+
+
+                /*string query = string.Format("INSERT INTO reader_information VALUES ({0},'{1}',{2},'{3}','{4}','{5}','{6}',{7},{8},{9},{10},{11},'{12}')", ID, password, category, name, gender, number, registration, valid, currently, cumulative, loss, violations, remark);*/
                 MySqlConnection conn = Database.GetMySqlConnection();
                 conn.Open();
                 MySqlCommand cmd = new MySqlCommand(query, conn);
@@ -196,7 +198,9 @@ namespace lab15_library_management_system.Administrator.Library.Basic
 
             if (Lbl_Status.Text == "Modify")
             {
-                string query = string.Format("UPDATE reader_information SET `Rid` = {0}, `Password` = '{1}', `Cid` = {2}, `name` = '{3}', `gender` = '{4}', `number` = '{5}', `registration` = '{6}', `valid` = {7}, `currently` = {8}, `cumulative` = {9}, `loss` = {10}, `violations` = {11}, `remark` = '{12}' WHERE `Rid` = {13}", ID, password, category, name, gender, number, registration, valid, currently, cumulative, loss, violations, remark, ID);
+                string query = string.Format("UPDATE basic_information_books SET `ISBN` = '{0}', `id` = {1}, `name` = '{2}', `TYPE` = '{3}', `author` = '{4}', `edition` = '{5}', `publication_date` = {6}, `price` = {7}, `introduction` = '{8}', `quantity` = {9}, `total` = {10} WHERE `ISBN` = '{11}'", ISBN, publishing_house, name, type, author, edition, publication_date, price, introduction, quantity, total, ISBN);
+
+                /*string query = string.Format("UPDATE reader_information SET `Rid` = {0}, `Password` = '{1}', `Cid` = {2}, `name` = '{3}', `gender` = '{4}', `number` = '{5}', `registration` = '{6}', `valid` = {7}, `currently` = {8}, `cumulative` = {9}, `loss` = {10}, `violations` = {11}, `remark` = '{12}' WHERE `Rid` = {13}", ID, password, category, name, gender, number, registration, valid, currently, cumulative, loss, violations, remark, ID);*/
                 MySqlConnection conn = Database.GetMySqlConnection();
                 conn.Open();
                 MySqlCommand cmd = new MySqlCommand(query, conn);
@@ -216,31 +220,29 @@ namespace lab15_library_management_system.Administrator.Library.Basic
                     lbl_Note.Text = "Modify failed!";
                 }
                 return;
-            }*/
+            }
         }
 
         private void lv_Customer_SelectedIndexChanged(object sender, EventArgs e)
         {
-  /*          if (lv_Customer.SelectedItems.Count > 0)
+            if (lv_Customer.SelectedItems.Count > 0)
             {
                 ListViewItem myitem = lv_Customer.SelectedItems[0];
 
                 Txt_ISBN.Text = myitem.SubItems[0].Text;
-                reader_id = Txt_ISBN.Text;
-                Txt_Publishing_House.Text = myitem.SubItems[1].Text;
-                Cb_Category.Text = myitem.SubItems[2].Text;
+                basic_book_id = Txt_ISBN.Text;
+                Cb_ph.Text = myitem.SubItems[1].Text;
+                Txt_Name.Text = myitem.SubItems[2].Text;
                 Txt_Type.Text = myitem.SubItems[3].Text;
                 Txt_Author.Text = myitem.SubItems[4].Text;
                 Txt_Edition.Text = myitem.SubItems[5].Text;
                 Txt_Publication_Date.Text = myitem.SubItems[6].Text;
                 Txt_Price.Text = myitem.SubItems[7].Text;
-                Nudown_Currently.Value = decimal.Parse(myitem.SubItems[8].Text);
+                Txt_Introduction.Text = myitem.SubItems[8].Text;
                 Nudown_Quantity.Value = decimal.Parse(myitem.SubItems[9].Text);
-                Cb_Loss.Text = myitem.SubItems[10].Text;
-                Nudown_Total.Value = decimal.Parse(myitem.SubItems[11].Text);
-                Txt_Remark.Text = myitem.SubItems[12].Text;
+                Nudown_Total.Value = decimal.Parse(myitem.SubItems[10].Text);
                 Lbl_Status.Text = "Modify";
-            }*/
+            }
         }
 
         private void btn_Cancel_Click(object sender, EventArgs e)
@@ -256,7 +258,7 @@ namespace lab15_library_management_system.Administrator.Library.Basic
 
         private void btn_Del_Click(object sender, EventArgs e)
         {
-/*            if (reader_id == "")
+            if (basic_book_id == "")
             {
                 MessageBox.Show("Please select the one you want to delete");
                 return;
@@ -265,7 +267,9 @@ namespace lab15_library_management_system.Administrator.Library.Basic
             DialogResult res = MessageBox.Show("Sure you want to delete?", "Delete tips", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (res == DialogResult.Yes)
             {
-                string query = string.Format("DELETE FROM reader_information WHERE Rid={0}", reader_id);
+                string query = string.Format("DELETE FROM basic_information_books WHERE ISBN='{0}'", basic_book_id);
+
+                /*string query = string.Format("DELETE FROM reader_information WHERE Rid={0}", reader_id);*/
                 MySqlConnection conn = Database.GetMySqlConnection();
                 conn.Open();
                 MySqlCommand cmd = new MySqlCommand(query, conn);
@@ -284,7 +288,21 @@ namespace lab15_library_management_system.Administrator.Library.Basic
                     lbl_Note.ForeColor = Color.Red;
                     lbl_Note.Text = "Delete failed!";
                 }
-            }*/
+            }
+        }
+
+        protected void Databind_Publishing_House()
+        {
+            string sql = "select * from publisher_information";
+            MySqlConnection conn = Database.GetMySqlConnection();
+            conn.Open();
+            MySqlDataAdapter da = new MySqlDataAdapter(sql, conn);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            conn.Close();
+            Cb_ph.DataSource = dt;
+            Cb_ph.DisplayMember = "name";
+            Cb_ph.ValueMember = "id";
         }
     }
 }
