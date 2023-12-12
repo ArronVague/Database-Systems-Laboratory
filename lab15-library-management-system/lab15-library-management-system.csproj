@@ -62,6 +62,12 @@
     <Compile Include="Administrator\Library\Basic\Basic_Management.Designer.cs">
       <DependentUpon>Basic_Management.cs</DependentUpon>
     </Compile>
+    <Compile Include="Administrator\Library\Collection\Collection_Management.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrator\Library\Collection\Collection_Management.Designer.cs">
+      <DependentUpon>Collection_Management.cs</DependentUpon>
+    </Compile>
     <Compile Include="Administrator\Library\Library_Management.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,6 +118,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Administrator\Library\Basic\Basic_Management.resx">
       <DependentUpon>Basic_Management.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrator\Library\Collection\Collection_Management.resx">
+      <DependentUpon>Collection_Management.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Administrator\Library\Library_Management.resx">
       <DependentUpon>Library_Management.cs</DependentUpon>

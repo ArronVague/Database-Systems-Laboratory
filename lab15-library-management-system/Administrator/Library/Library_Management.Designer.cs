@@ -99,6 +99,7 @@
             this.Btn_Collection_book_information_management.TabIndex = 12;
             this.Btn_Collection_book_information_management.Text = "Collection book information management";
             this.Btn_Collection_book_information_management.UseVisualStyleBackColor = true;
+            this.Btn_Collection_book_information_management.Click += new System.EventHandler(this.Btn_Collection_book_information_management_Click);
             // 
             // Library_Management
             // 
