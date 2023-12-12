@@ -242,4 +242,24 @@ SET
     `quantity` = 0,
     `total` = 0
 WHERE
-    `ISBN` = '11'
+    `ISBN` = '11';
+
+SELECT
+    *
+FROM
+    book_collection_information;
+
+INSERT INTO
+    book_collection_information
+VALUES
+    (
+        NULL,
+        'ISBN',
+        '2021-01-01',
+        'not lent'
+    );
+
+UPDATE
+    book_collection_information
+SET
+    STATUS = 'not lent';
