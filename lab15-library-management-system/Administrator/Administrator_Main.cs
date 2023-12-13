@@ -43,5 +43,14 @@ namespace lab15_library_management_system.Administrator
             library_Management.ShowDialog();
             this.Show();
         }
+
+        private void Btn_Business_Management_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Business.Business_Management business_Management = new Business.Business_Management();
+            business_Management.administrator_id = administrator_id;
+            business_Management.ShowDialog();
+            this.Show();
+        }
     }
 }

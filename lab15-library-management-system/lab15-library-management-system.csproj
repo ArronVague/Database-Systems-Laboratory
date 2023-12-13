@@ -56,6 +56,18 @@
     <Compile Include="Administrator\Administrator_Main.Designer.cs">
       <DependentUpon>Administrator_Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="Administrator\Business\Borrow_Return\Borrow_Return_Management.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrator\Business\Borrow_Return\Borrow_Return_Management.Designer.cs">
+      <DependentUpon>Borrow_Return_Management.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrator\Business\Business_Management.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrator\Business\Business_Management.Designer.cs">
+      <DependentUpon>Business_Management.cs</DependentUpon>
+    </Compile>
     <Compile Include="Administrator\Library\Basic\Basic_Management.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,6 +127,12 @@
     </Compile>
     <EmbeddedResource Include="Administrator\Administrator_Main.resx">
       <DependentUpon>Administrator_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrator\Business\Borrow_Return\Borrow_Return_Management.resx">
+      <DependentUpon>Borrow_Return_Management.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrator\Business\Business_Management.resx">
+      <DependentUpon>Business_Management.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Administrator\Library\Basic\Basic_Management.resx">
       <DependentUpon>Basic_Management.cs</DependentUpon>

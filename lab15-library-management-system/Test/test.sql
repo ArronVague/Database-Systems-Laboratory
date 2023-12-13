@@ -263,3 +263,8 @@ UPDATE
     book_collection_information
 SET
     STATUS = 'not lent';
+
+SELECT
+    *
+FROM
+    book_borrowing_records;
