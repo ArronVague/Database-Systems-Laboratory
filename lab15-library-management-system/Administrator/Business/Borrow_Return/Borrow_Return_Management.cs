@@ -24,7 +24,9 @@ namespace lab15_library_management_system.Administrator.Business.Borrow_Return
         private void Borrow_Return_Management_Load(object sender, EventArgs e)
         {
             DataBind_Customer();
-            Databind_Category();
+            Databind_Book_ID();
+            Databind_Reader_ID();
+            Databind_Overdue();
             Databind_Loss();
             ClearTextBox();
             Lbl_Administrator_ID.Text = administrator_id;
@@ -66,41 +68,65 @@ FROM
                 else
                 {
                     // 日期格式为yyyy/MM/dd
-                    myitem.SubItems.Add(DateTime.Parse(dr["valid"].ToString()).ToString("yyyy/MM/dd"));
+                    myitem.SubItems.Add(DateTime.Parse(dr["return_time"].ToString()).ToString("yyyy/MM/dd"));
                 }
-                myitem.SubItems.Add(dr["overdue"].ToString() == "1" ? "Yes" : "No");
-                myitem.SubItems.Add(dr["loss"].ToString() == "1" ? "Yes" : "No");
+                myitem.SubItems.Add(dr["overdue"].ToString() == "True" ? "Yes" : "No");
+                myitem.SubItems.Add(dr["loss"].ToString() == "True" ? "Yes" : "No");
 
                 lv_Customer.Items.Add(myitem);
             }
         }
 
-        protected void Databind_Category()
+        protected void Databind_Book_ID()
         {
-/*            string sql = "select * from reader_category";
+            string sql = "select * from book_collection_information";
             MySqlConnection conn = Database.GetMySqlConnection();
             conn.Open();
             MySqlDataAdapter da = new MySqlDataAdapter(sql, conn);
             DataTable dt = new DataTable();
             da.Fill(dt);
             conn.Close();
-            Cb_Category.DataSource = dt;
-            Cb_Category.DisplayMember = "name";
-            Cb_Category.ValueMember = "Cid";
-*/
+            Cb_Book_ID.DataSource = dt;
+            Cb_Book_ID.DisplayMember = "BCid";
+            Cb_Book_ID.ValueMember = "BCid";
+        }
 
+        protected void Databind_Reader_ID()
+        {
+            string sql = "select * from reader_information";
+            MySqlConnection conn = Database.GetMySqlConnection();
+            conn.Open();
+            MySqlDataAdapter da = new MySqlDataAdapter(sql, conn);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            conn.Close();
+            Cb_Reader_ID.DataSource = dt;
+            Cb_Reader_ID.DisplayMember = "Rid";
+            Cb_Reader_ID.ValueMember = "Rid";
+        }
+
+        protected void Databind_Overdue()
+        {
+            DataTable dt = new DataTable();
+            dt.Columns.Add("id", typeof(int));
+            dt.Columns.Add("name", typeof(string));
+            dt.Rows.Add(0, "No");
+            dt.Rows.Add(1, "Yes");
+            Cb_Overdue.DataSource = dt;
+            Cb_Overdue.DisplayMember = dt.Columns[1].ColumnName;
+            Cb_Overdue.ValueMember = dt.Columns[0].ColumnName;
         }
 
         protected void Databind_Loss()
         {
-/*            DataTable dt = new DataTable();
+            DataTable dt = new DataTable();
             dt.Columns.Add("id", typeof(int));
             dt.Columns.Add("name", typeof(string));
             dt.Rows.Add(0, "No");
             dt.Rows.Add(1, "Yes");
             Cb_Loss.DataSource = dt;
             Cb_Loss.DisplayMember = dt.Columns[1].ColumnName;
-            Cb_Loss.ValueMember = dt.Columns[0].ColumnName;*/
+            Cb_Loss.ValueMember = dt.Columns[0].ColumnName;
         }
 
         /*
@@ -120,27 +146,26 @@ FROM
 
         private void ClearTextBox()
         {
-/*            Txt_ID.Clear();
-            Txt_Password.Clear();
-            Cb_Category.SelectedIndex = 0;
-            Txt_Name.Clear();
-            Txt_Gender.Clear();
-            Txt_Number.Clear();
-            Txt_Registration.Clear();
-            Txt_Valid.Clear();
-            Nudown_Currently.Value = 0;
-            Nudown_Cumulative.Value = 0;
+            Lbl_Show_ID.Text = "";
+            Cb_Book_ID.SelectedIndex = 0;
+            Cb_Reader_ID.SelectedIndex = 0;
+            Lbl_Admin_Borrow_ID.Text = "";
+            Lbl_Admin_return_ID.Text = "";
+            Txt_Borrowing_time.Clear();
+            Txt_Due_Time.Clear();  
+            Nudown_Renewals.Value = 0;
+            Txt_Return_Time.Clear();
+            Cb_Overdue.SelectedIndex = 0;
             Cb_Loss.SelectedIndex = 0;
-            Nudown_Violations.Value = 0;
-            Txt_Remark.Clear();
+
             Lbl_Status.Text = "Add";
-            reader_id = "";*/
+            record_id = "";
 
         }
 
         private void btn_Save_Click(object sender, EventArgs e)
         {
- /*           string ID = Txt_ID.Text.Trim();
+            /*string ID = Txt_ID.Text.Trim();
             string password = Txt_Password.Text.Trim();
             string category = Cb_Category.SelectedValue.ToString();
             string name = Txt_Name.Text.Trim();
@@ -152,36 +177,73 @@ FROM
             string cumulative = Nudown_Cumulative.Value.ToString();
             string loss = Cb_Loss.SelectedValue.ToString();
             string violations = Nudown_Violations.Value.ToString();
-            string remark = Txt_Remark.Text.Trim();
-
-            if (ID.Length == 0)
-            {
-                lbl_Note.ForeColor = Color.Red;
-                lbl_Note.Text = "The ID cannot be empty!";
-                Txt_ID.Focus();
-                return;
-            }
-
-            if (registration.Length == 0)
-            {
-                lbl_Note.ForeColor = Color.Red;
-                lbl_Note.Text = "The registration cannot be empty!";
-                Txt_Registration.Focus();
-                return;
-            }
-
-            if (valid.Length == 0)
-            {
-                valid = "NULL";
-            }
-            else
-            {
-                valid = "'" + valid + "'";
-            }
+            string remark = Txt_Remark.Text.Trim();*/
+            string book_id = Cb_Book_ID.SelectedValue.ToString();
+            string reader_id = Cb_Reader_ID.SelectedValue.ToString();
+            string administrator_borrow_id;
+            string administrator_return_id;
+            string borrowing_time = Txt_Borrowing_time.Text.Trim();
+            string renewals = Nudown_Renewals.Value.ToString();
+            string due_time = DateTime.Now.AddMonths(1 * (int.Parse(renewals) + 1)).ToString("yyyy/MM/dd");
+            string return_time = Txt_Return_Time.Text.Trim();
+            string overdue = Cb_Overdue.SelectedValue.ToString();
+            string loss = Cb_Loss.SelectedValue.ToString();
 
             if (Lbl_Status.Text == "Add")
             {
-                string query = string.Format("INSERT INTO reader_information VALUES ({0},'{1}',{2},'{3}','{4}','{5}','{6}',{7},{8},{9},{10},{11},'{12}')", ID, password, category, name, gender, number, registration, valid, currently, cumulative, loss, violations, remark);
+                administrator_borrow_id = administrator_id;
+            }
+            else
+            {
+                administrator_borrow_id = Lbl_Admin_Borrow_ID.Text;
+            }
+
+            if (borrowing_time.Length == 0)
+            {
+                lbl_Note.ForeColor = Color.Red;
+                lbl_Note.Text = "The borrowing time cannot be empty!";
+                Txt_Borrowing_time.Focus();
+                return;
+            }
+
+            if (return_time.Length == 0)
+            {
+                return_time = "NULL";
+                administrator_return_id = "NULL";
+            }
+            else
+            {
+                if (DateTime.Parse(return_time) > DateTime.Parse(due_time))
+                {
+                    overdue = "1";
+                }
+                return_time = "'" + return_time + "'";
+                administrator_return_id = administrator_id;
+                // return_time比due_time晚，overdue为1
+                
+            }
+
+            /*INSERT INTO
+                book_borrowing_records
+            VALUES
+                (
+                    NULL,
+                    203,
+                    1,
+                    2,
+                    1,
+                    '2021-01-01',
+                    '2021-01-01',
+                    1,
+                    '2021-01-01',
+                    0,
+                    0
+                );*/
+
+            if (Lbl_Status.Text == "Add")
+            {
+                
+                string query = string.Format("INSERT INTO book_borrowing_records VALUES (NULL, {0}, {1}, {2}, {3}, '{4}', '{5}', {6}, {7}, {8}, {9})", book_id, reader_id, administrator_borrow_id, administrator_return_id, borrowing_time, due_time, renewals, return_time, overdue, loss);
                 MySqlConnection conn = Database.GetMySqlConnection();
                 conn.Open();
                 MySqlCommand cmd = new MySqlCommand(query, conn);
@@ -205,7 +267,7 @@ FROM
 
             if (Lbl_Status.Text == "Modify")
             {
-                string query = string.Format("UPDATE reader_information SET `Rid` = {0}, `Password` = '{1}', `Cid` = {2}, `name` = '{3}', `gender` = '{4}', `number` = '{5}', `registration` = '{6}', `valid` = {7}, `currently` = {8}, `cumulative` = {9}, `loss` = {10}, `violations` = {11}, `remark` = '{12}' WHERE `Rid` = {13}", ID, password, category, name, gender, number, registration, valid, currently, cumulative, loss, violations, remark, ID);
+                string query = string.Format(string.Format("UPDATE book_borrowing_records SET BCid={0}, Rid={1}, BAid={2}, RAid={3}, borrowing_time='{4}', due_time='{5}', renewals={6}, return_time={7}, overdue={8}, loss={9} WHERE BBid={10}", book_id, reader_id, administrator_borrow_id, administrator_return_id, borrowing_time, due_time, renewals, return_time, overdue, loss, record_id));
                 MySqlConnection conn = Database.GetMySqlConnection();
                 conn.Open();
                 MySqlCommand cmd = new MySqlCommand(query, conn);
@@ -225,31 +287,29 @@ FROM
                     lbl_Note.Text = "Modify failed!";
                 }
                 return;
-            }*/
+            }
         }
 
         private void lv_Customer_SelectedIndexChanged(object sender, EventArgs e)
         {
-            /*if (lv_Customer.SelectedItems.Count > 0)
+            if (lv_Customer.SelectedItems.Count > 0)
             {
-                ListViewItem myitem = lv_Customer.SelectedItems[0];
+                ListViewItem item = lv_Customer.SelectedItems[0];
+                record_id = item.SubItems[0].Text;
+                Lbl_Show_ID.Text = item.SubItems[0].Text;
+                Cb_Book_ID.SelectedValue = item.SubItems[1].Text;
+                Cb_Reader_ID.SelectedValue = item.SubItems[2].Text;
+                Lbl_Admin_Borrow_ID.Text = item.SubItems[3].Text;
+                Lbl_Admin_return_ID.Text = item.SubItems[4].Text;
+                Txt_Borrowing_time.Text = item.SubItems[5].Text;
+                Txt_Due_Time.Text = item.SubItems[6].Text;
+                Nudown_Renewals.Value = int.Parse(item.SubItems[7].Text);
+                Txt_Return_Time.Text = item.SubItems[8].Text;
+                Cb_Overdue.SelectedValue = item.SubItems[9].Text == "Yes" ? "1" : "0";
+                Cb_Loss.SelectedValue = item.SubItems[10].Text == "Yes" ? "1" : "0";
 
-                Txt_ID.Text = myitem.SubItems[0].Text;
-                reader_id = Txt_ID.Text;
-                Txt_Password.Text = myitem.SubItems[1].Text;
-                Cb_Category.Text = myitem.SubItems[2].Text;
-                Txt_Name.Text = myitem.SubItems[3].Text;
-                Txt_Gender.Text = myitem.SubItems[4].Text;
-                Txt_Number.Text = myitem.SubItems[5].Text;
-                Txt_Registration.Text = myitem.SubItems[6].Text;
-                Txt_Valid.Text = myitem.SubItems[7].Text;
-                Nudown_Currently.Value = decimal.Parse(myitem.SubItems[8].Text);
-                Nudown_Cumulative.Value = decimal.Parse(myitem.SubItems[9].Text);
-                Cb_Loss.Text = myitem.SubItems[10].Text;
-                Nudown_Violations.Value = decimal.Parse(myitem.SubItems[11].Text);
-                Txt_Remark.Text = myitem.SubItems[12].Text;
                 Lbl_Status.Text = "Modify";
-            }*/
+            }
         }
 
         private void btn_Cancel_Click(object sender, EventArgs e)
@@ -265,7 +325,7 @@ FROM
 
         private void btn_Del_Click(object sender, EventArgs e)
         {
-            /*if (reader_id == "")
+            if (record_id == "")
             {
                 MessageBox.Show("Please select the one you want to delete");
                 return;
@@ -274,7 +334,7 @@ FROM
             DialogResult res = MessageBox.Show("Sure you want to delete?", "Delete tips", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (res == DialogResult.Yes)
             {
-                string query = string.Format("DELETE FROM reader_information WHERE Rid={0}", reader_id);
+                string query = string.Format(Name = "DELETE FROM book_borrowing_records WHERE BBid={0}", record_id);
                 MySqlConnection conn = Database.GetMySqlConnection();
                 conn.Open();
                 MySqlCommand cmd = new MySqlCommand(query, conn);
@@ -293,7 +353,7 @@ FROM
                     lbl_Note.ForeColor = Color.Red;
                     lbl_Note.Text = "Delete failed!";
                 }
-            }*/
+            }
         }
     }
 }

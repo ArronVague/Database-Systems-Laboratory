@@ -268,3 +268,30 @@ SELECT
     *
 FROM
     book_borrowing_records;
+
+SELECT
+    *
+FROM
+    book_collection_information;
+
+SELECT
+    *
+FROM
+    reader_information;
+
+INSERT INTO
+    book_borrowing_records
+VALUES
+    (
+        NULL,
+        203,
+        1,
+        2,
+        1,
+        '2021-01-01',
+        '2021-01-01',
+        1,
+        '2021-01-01',
+        0,
+        0
+    );

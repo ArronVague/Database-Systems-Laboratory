@@ -44,6 +44,20 @@
             this.lbl_Note = new System.Windows.Forms.Label();
             this.btn_Del = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.Cb_Loss = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.Txt_Return_Time = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.Txt_Due_Time = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.Txt_Borrowing_time = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.Lbl_Admin_return_ID = new System.Windows.Forms.Label();
+            this.Lbl_Admin_Borrow_ID = new System.Windows.Forms.Label();
+            this.test = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.Cb_Book_ID = new System.Windows.Forms.ComboBox();
+            this.Lbl_Show_ID = new System.Windows.Forms.Label();
             this.Cb_Overdue = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.Cb_Reader_ID = new System.Windows.Forms.ComboBox();
@@ -52,6 +66,7 @@
             this.Btn_Category_Management_Return = new System.Windows.Forms.Button();
             this.Lbl_Status = new System.Windows.Forms.Label();
             this.btn_Cancel = new System.Windows.Forms.Button();
+            this.btn_Save = new System.Windows.Forms.Button();
             this.Nudown_Renewals = new System.Windows.Forms.NumericUpDown();
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -60,21 +75,6 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.Lbl_Administrator_ID = new System.Windows.Forms.ToolStripStatusLabel();
-            this.Lbl_Show_ID = new System.Windows.Forms.Label();
-            this.Cb_Book_ID = new System.Windows.Forms.ComboBox();
-            this.Lbl_Admin_return_ID = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.Lbl_Admin_Borrow_ID = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.btn_Save = new System.Windows.Forms.Button();
-            this.Txt_Borrowing_time = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.Txt_Due_Time = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.Txt_Return_Time = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.Cb_Loss = new System.Windows.Forms.ComboBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Nudown_Renewals)).BeginInit();
@@ -120,6 +120,7 @@
             this.lv_Customer.TabIndex = 19;
             this.lv_Customer.UseCompatibleStateImageBehavior = false;
             this.lv_Customer.View = System.Windows.Forms.View.Details;
+            this.lv_Customer.SelectedIndexChanged += new System.EventHandler(this.lv_Customer_SelectedIndexChanged);
             // 
             // columnHeader1
             // 
@@ -184,6 +185,7 @@
             this.btn_Del.TabIndex = 0;
             this.btn_Del.Text = "Delete";
             this.btn_Del.UseVisualStyleBackColor = true;
+            this.btn_Del.Click += new System.EventHandler(this.btn_Del_Click);
             // 
             // groupBox1
             // 
@@ -195,9 +197,9 @@
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.Txt_Borrowing_time);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label16);
-            this.groupBox1.Controls.Add(this.Lbl_Admin_Borrow_ID);
             this.groupBox1.Controls.Add(this.Lbl_Admin_return_ID);
+            this.groupBox1.Controls.Add(this.Lbl_Admin_Borrow_ID);
+            this.groupBox1.Controls.Add(this.test);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.Cb_Book_ID);
             this.groupBox1.Controls.Add(this.Lbl_Show_ID);
@@ -221,6 +223,137 @@
             this.groupBox1.TabIndex = 23;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Edit reader information  Status:";
+            // 
+            // Cb_Loss
+            // 
+            this.Cb_Loss.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Cb_Loss.FormattingEnabled = true;
+            this.Cb_Loss.Location = new System.Drawing.Point(320, 167);
+            this.Cb_Loss.Name = "Cb_Loss";
+            this.Cb_Loss.Size = new System.Drawing.Size(60, 20);
+            this.Cb_Loss.TabIndex = 58;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(247, 173);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(29, 12);
+            this.label9.TabIndex = 57;
+            this.label9.Text = "Loss";
+            // 
+            // Txt_Return_Time
+            // 
+            this.Txt_Return_Time.Location = new System.Drawing.Point(320, 108);
+            this.Txt_Return_Time.Margin = new System.Windows.Forms.Padding(2);
+            this.Txt_Return_Time.Name = "Txt_Return_Time";
+            this.Txt_Return_Time.Size = new System.Drawing.Size(124, 21);
+            this.Txt_Return_Time.TabIndex = 56;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(234, 111);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(71, 12);
+            this.label2.TabIndex = 55;
+            this.label2.Text = "Return time";
+            // 
+            // Txt_Due_Time
+            // 
+            this.Txt_Due_Time.Location = new System.Drawing.Point(98, 195);
+            this.Txt_Due_Time.Margin = new System.Windows.Forms.Padding(2);
+            this.Txt_Due_Time.Name = "Txt_Due_Time";
+            this.Txt_Due_Time.Size = new System.Drawing.Size(124, 21);
+            this.Txt_Due_Time.TabIndex = 54;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(3, 195);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(53, 12);
+            this.label8.TabIndex = 53;
+            this.label8.Text = "Due time";
+            // 
+            // Txt_Borrowing_time
+            // 
+            this.Txt_Borrowing_time.Location = new System.Drawing.Point(98, 157);
+            this.Txt_Borrowing_time.Margin = new System.Windows.Forms.Padding(2);
+            this.Txt_Borrowing_time.Name = "Txt_Borrowing_time";
+            this.Txt_Borrowing_time.Size = new System.Drawing.Size(124, 21);
+            this.Txt_Borrowing_time.TabIndex = 52;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(3, 161);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(89, 12);
+            this.label4.TabIndex = 51;
+            this.label4.Text = "Borrowing time";
+            // 
+            // Lbl_Admin_return_ID
+            // 
+            this.Lbl_Admin_return_ID.AutoSize = true;
+            this.Lbl_Admin_return_ID.Location = new System.Drawing.Point(112, 139);
+            this.Lbl_Admin_return_ID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Lbl_Admin_return_ID.Name = "Lbl_Admin_return_ID";
+            this.Lbl_Admin_return_ID.Size = new System.Drawing.Size(47, 12);
+            this.Lbl_Admin_return_ID.TabIndex = 50;
+            this.Lbl_Admin_return_ID.Text = "Show ID";
+            // 
+            // Lbl_Admin_Borrow_ID
+            // 
+            this.Lbl_Admin_Borrow_ID.AutoSize = true;
+            this.Lbl_Admin_Borrow_ID.Location = new System.Drawing.Point(112, 115);
+            this.Lbl_Admin_Borrow_ID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Lbl_Admin_Borrow_ID.Name = "Lbl_Admin_Borrow_ID";
+            this.Lbl_Admin_Borrow_ID.Size = new System.Drawing.Size(47, 12);
+            this.Lbl_Admin_Borrow_ID.TabIndex = 49;
+            this.Lbl_Admin_Borrow_ID.Text = "Show ID";
+            // 
+            // test
+            // 
+            this.test.AutoSize = true;
+            this.test.Location = new System.Drawing.Point(4, 139);
+            this.test.Name = "test";
+            this.test.Size = new System.Drawing.Size(95, 12);
+            this.test.TabIndex = 48;
+            this.test.Text = "Admin return ID";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(4, 115);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(95, 12);
+            this.label7.TabIndex = 47;
+            this.label7.Text = "Admin borrow ID";
+            // 
+            // Cb_Book_ID
+            // 
+            this.Cb_Book_ID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Cb_Book_ID.FormattingEnabled = true;
+            this.Cb_Book_ID.Location = new System.Drawing.Point(73, 53);
+            this.Cb_Book_ID.Name = "Cb_Book_ID";
+            this.Cb_Book_ID.Size = new System.Drawing.Size(121, 20);
+            this.Cb_Book_ID.TabIndex = 46;
+            // 
+            // Lbl_Show_ID
+            // 
+            this.Lbl_Show_ID.AutoSize = true;
+            this.Lbl_Show_ID.Location = new System.Drawing.Point(112, 28);
+            this.Lbl_Show_ID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Lbl_Show_ID.Name = "Lbl_Show_ID";
+            this.Lbl_Show_ID.Size = new System.Drawing.Size(47, 12);
+            this.Lbl_Show_ID.TabIndex = 45;
+            this.Lbl_Show_ID.Text = "Show ID";
             // 
             // Cb_Overdue
             // 
@@ -278,6 +411,7 @@
             this.Btn_Category_Management_Return.TabIndex = 21;
             this.Btn_Category_Management_Return.Text = "Return";
             this.Btn_Category_Management_Return.UseVisualStyleBackColor = true;
+            this.Btn_Category_Management_Return.Click += new System.EventHandler(this.Btn_Category_Management_Return_Click);
             // 
             // Lbl_Status
             // 
@@ -298,6 +432,18 @@
             this.btn_Cancel.TabIndex = 16;
             this.btn_Cancel.Text = "Cancel";
             this.btn_Cancel.UseVisualStyleBackColor = true;
+            this.btn_Cancel.Click += new System.EventHandler(this.btn_Cancel_Click);
+            // 
+            // btn_Save
+            // 
+            this.btn_Save.Location = new System.Drawing.Point(320, 233);
+            this.btn_Save.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_Save.Name = "btn_Save";
+            this.btn_Save.Size = new System.Drawing.Size(50, 22);
+            this.btn_Save.TabIndex = 15;
+            this.btn_Save.Text = "Save";
+            this.btn_Save.UseVisualStyleBackColor = true;
+            this.btn_Save.Click += new System.EventHandler(this.btn_Save_Click);
             // 
             // Nudown_Renewals
             // 
@@ -373,147 +519,6 @@
             this.Lbl_Administrator_ID.Size = new System.Drawing.Size(151, 20);
             this.Lbl_Administrator_ID.Text = "toolStripStatusLabel2";
             // 
-            // Lbl_Show_ID
-            // 
-            this.Lbl_Show_ID.AutoSize = true;
-            this.Lbl_Show_ID.Location = new System.Drawing.Point(112, 28);
-            this.Lbl_Show_ID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.Lbl_Show_ID.Name = "Lbl_Show_ID";
-            this.Lbl_Show_ID.Size = new System.Drawing.Size(47, 12);
-            this.Lbl_Show_ID.TabIndex = 45;
-            this.Lbl_Show_ID.Text = "Show ID";
-            // 
-            // Cb_Book_ID
-            // 
-            this.Cb_Book_ID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.Cb_Book_ID.FormattingEnabled = true;
-            this.Cb_Book_ID.Location = new System.Drawing.Point(73, 53);
-            this.Cb_Book_ID.Name = "Cb_Book_ID";
-            this.Cb_Book_ID.Size = new System.Drawing.Size(121, 20);
-            this.Cb_Book_ID.TabIndex = 46;
-            // 
-            // Lbl_Admin_return_ID
-            // 
-            this.Lbl_Admin_return_ID.AutoSize = true;
-            this.Lbl_Admin_return_ID.Location = new System.Drawing.Point(4, 139);
-            this.Lbl_Admin_return_ID.Name = "Lbl_Admin_return_ID";
-            this.Lbl_Admin_return_ID.Size = new System.Drawing.Size(95, 12);
-            this.Lbl_Admin_return_ID.TabIndex = 48;
-            this.Lbl_Admin_return_ID.Text = "Admin return ID";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(4, 115);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(95, 12);
-            this.label7.TabIndex = 47;
-            this.label7.Text = "Admin borrow ID";
-            // 
-            // Lbl_Admin_Borrow_ID
-            // 
-            this.Lbl_Admin_Borrow_ID.AutoSize = true;
-            this.Lbl_Admin_Borrow_ID.Location = new System.Drawing.Point(112, 115);
-            this.Lbl_Admin_Borrow_ID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.Lbl_Admin_Borrow_ID.Name = "Lbl_Admin_Borrow_ID";
-            this.Lbl_Admin_Borrow_ID.Size = new System.Drawing.Size(47, 12);
-            this.Lbl_Admin_Borrow_ID.TabIndex = 49;
-            this.Lbl_Admin_Borrow_ID.Text = "Show ID";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(112, 139);
-            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(47, 12);
-            this.label16.TabIndex = 50;
-            this.label16.Text = "Show ID";
-            // 
-            // btn_Save
-            // 
-            this.btn_Save.Location = new System.Drawing.Point(320, 233);
-            this.btn_Save.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_Save.Name = "btn_Save";
-            this.btn_Save.Size = new System.Drawing.Size(50, 22);
-            this.btn_Save.TabIndex = 15;
-            this.btn_Save.Text = "Save";
-            this.btn_Save.UseVisualStyleBackColor = true;
-            // 
-            // Txt_Borrowing_time
-            // 
-            this.Txt_Borrowing_time.Location = new System.Drawing.Point(98, 157);
-            this.Txt_Borrowing_time.Margin = new System.Windows.Forms.Padding(2);
-            this.Txt_Borrowing_time.Name = "Txt_Borrowing_time";
-            this.Txt_Borrowing_time.Size = new System.Drawing.Size(124, 21);
-            this.Txt_Borrowing_time.TabIndex = 52;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(3, 161);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(89, 12);
-            this.label4.TabIndex = 51;
-            this.label4.Text = "Borrowing time";
-            // 
-            // Txt_Due_Time
-            // 
-            this.Txt_Due_Time.Location = new System.Drawing.Point(98, 195);
-            this.Txt_Due_Time.Margin = new System.Windows.Forms.Padding(2);
-            this.Txt_Due_Time.Name = "Txt_Due_Time";
-            this.Txt_Due_Time.Size = new System.Drawing.Size(124, 21);
-            this.Txt_Due_Time.TabIndex = 54;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(3, 195);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(53, 12);
-            this.label8.TabIndex = 53;
-            this.label8.Text = "Due time";
-            // 
-            // Txt_Return_Time
-            // 
-            this.Txt_Return_Time.Location = new System.Drawing.Point(320, 108);
-            this.Txt_Return_Time.Margin = new System.Windows.Forms.Padding(2);
-            this.Txt_Return_Time.Name = "Txt_Return_Time";
-            this.Txt_Return_Time.Size = new System.Drawing.Size(124, 21);
-            this.Txt_Return_Time.TabIndex = 56;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(234, 111);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(71, 12);
-            this.label2.TabIndex = 55;
-            this.label2.Text = "Return time";
-            // 
-            // Cb_Loss
-            // 
-            this.Cb_Loss.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.Cb_Loss.FormattingEnabled = true;
-            this.Cb_Loss.Location = new System.Drawing.Point(320, 167);
-            this.Cb_Loss.Name = "Cb_Loss";
-            this.Cb_Loss.Size = new System.Drawing.Size(60, 20);
-            this.Cb_Loss.TabIndex = 58;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(247, 173);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(29, 12);
-            this.label9.TabIndex = 57;
-            this.label9.Text = "Loss";
-            // 
             // Borrow_Return_Management
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -575,9 +580,9 @@
         private System.Windows.Forms.ToolStripStatusLabel Lbl_Administrator_ID;
         private System.Windows.Forms.Label Lbl_Show_ID;
         private System.Windows.Forms.ComboBox Cb_Book_ID;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label Lbl_Admin_Borrow_ID;
         private System.Windows.Forms.Label Lbl_Admin_return_ID;
+        private System.Windows.Forms.Label Lbl_Admin_Borrow_ID;
+        private System.Windows.Forms.Label test;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btn_Save;
         private System.Windows.Forms.TextBox Txt_Due_Time;
