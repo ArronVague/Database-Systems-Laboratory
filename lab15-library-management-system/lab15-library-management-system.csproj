@@ -68,6 +68,12 @@
     <Compile Include="Administrator\Business\Business_Management.Designer.cs">
       <DependentUpon>Business_Management.cs</DependentUpon>
     </Compile>
+    <Compile Include="Administrator\Business\Fine\Fine_Management.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrator\Business\Fine\Fine_Management.Designer.cs">
+      <DependentUpon>Fine_Management.cs</DependentUpon>
+    </Compile>
     <Compile Include="Administrator\Library\Basic\Basic_Management.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -133,6 +139,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Administrator\Business\Business_Management.resx">
       <DependentUpon>Business_Management.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrator\Business\Fine\Fine_Management.resx">
+      <DependentUpon>Fine_Management.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Administrator\Library\Basic\Basic_Management.resx">
       <DependentUpon>Basic_Management.cs</DependentUpon>

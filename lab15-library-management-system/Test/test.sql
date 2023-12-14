@@ -295,3 +295,44 @@ VALUES
         0,
         0
     );
+
+SELECT
+    *
+FROM
+    overdue_fine;
+
+INSERT INTO
+    overdue_fine
+VALUES
+    (
+        NULL,
+        16,
+        1,
+        20.0,
+        0,
+        '2023/12/14',
+        'remark'
+    );
+
+UPDATE
+    overdue_fine
+SET
+    BBid = 14,
+    Aid = 3,
+    penalty = 107.29,
+    pay = 0,
+    fine_date = '2022/01/21',
+    remark = 'haha'
+WHERE
+    id = 10
+UPDATE
+    overdue_fine
+SET
+    BBid = 14,
+    Aid = 3,
+    penalty = 107.29,
+    pay = 0,
+    fine_date = '2022/01/21',
+    remark = 'The first step is as good as half over. Genius is an infinite capacity for taking pains. If you wait, all that happens is you get older. A query is used to extract data from the database in a readable format according to the user''s request. To connect to a database or schema, simply double-click it in the pane. Flexible settings enable you to set up a custom key for comparison and synchronization. Difficult circumstances serve as a textbook of life for people. A man is not old until regrets take the place of dreams. Navicat provides a wide range advanced features, such as compelling code editing capabilities, smart code-completion, SQL formatting, and more. Monitored servers include MySQL, MariaDB and SQL Server, and compatible with cloud databases like Amazon RDS, Amazon Aurora, Oracle Cloud, Google Cloud and Microsoft Azure. You will succeed because most people are lazy. Import Wizard allows you to import data to tables/collections from CSV, TXT, XML, DBF and more. The repository database can be an existing MySQL, MariaDB, PostgreSQL, SQL Server, or Amazon RDS instance. Navicat Cloud could not connect and access your databases. By which it means, it could only store your connection settings, queries, model files, and virtual group; your database passwords and data (e.g. tables, views, etc) will not be stored to Navicat Cloud. Navicat allows you to transfer data from one database and/or schema to another with detailed analytical process. The first step is as good as half over. It can also manage cloud databases such as Amazon Redshift, Amazon RDS, Alibaba Cloud. Features in Navicat are sophisticated enough to provide professional developers for all their specific needs, yet easy to learn for users who are new to database server. How we spend our days is, of course, how we spend our lives. The Navigation pane employs tree structure which allows you to take action upon the database and their objects through their pop-up menus quickly and easily. Anyone who has never made a mistake has never tried anything new. If the Show objects under schema in navigation pane option is checked at the Preferences window, all database objects are also displayed in the pane. Navicat provides powerful tools for working with queries: Query Editor for editing the query text directly, and Query Builder, Find Builder or Aggregate Builder for building queries visually. All journeys have secret destinations of which the traveler is unaware. You cannot save people, you can just love them. All the Navicat Cloud objects are located under different projects. You can share the project to other Navicat Cloud accounts for collaboration. Navicat is a multi-connections Database Administration tool allowing you to connect to MySQL, Oracle, PostgreSQL, SQLite, SQL Server, MariaDB and/or MongoDB databases, making database administration to multiple kinds of database so easy. Navicat Monitor requires a repository to store alerts and metrics for historical analysis. Navicat is a multi-connections Database Administration tool allowing you to connect to MySQL, Oracle, PostgreSQL, SQLite, SQL Server, MariaDB and/or MongoDB databases, making database administration to multiple kinds of database so easy. Instead of wondering when your next vacation is, maybe you should set up a life you don’t need to escape from. Navicat Cloud could not connect and access your databases. By which it means, it could only store your connection settings, queries, model files, and virtual group; your database passwords and data (e.g. tables, views, etc) will not be stored to Navicat Cloud. There is no way to happiness. Happiness is the way. I will greet this day with love in my heart. HTTP Tunneling is a method for connecting to a server that uses the same protocol (http://) and the same port (port 80) as a web server does. Always keep your eyes open. Keep watching. Because whatever you see can inspire you.'
+WHERE
+    id = 10;

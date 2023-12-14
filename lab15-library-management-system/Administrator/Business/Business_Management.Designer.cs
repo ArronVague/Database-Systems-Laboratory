@@ -55,6 +55,7 @@
             this.Btn_Fine_management.TabIndex = 15;
             this.Btn_Fine_management.Text = "Fine management";
             this.Btn_Fine_management.UseVisualStyleBackColor = true;
+            this.Btn_Fine_management.Click += new System.EventHandler(this.Btn_Fine_management_Click);
             // 
             // Btn_Books_borrowing_returning_management
             // 

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using lab15_library_management_system.Administrator.Business.Borrow_Return;
+using lab15_library_management_system.Administrator.Business.Fine;
 
 namespace lab15_library_management_system.Administrator.Business
 {
@@ -36,6 +37,15 @@ namespace lab15_library_management_system.Administrator.Business
             Borrow_Return_Management borrow_return_management = new Borrow_Return_Management();
             borrow_return_management.administrator_id = administrator_id;
             borrow_return_management.ShowDialog();
+            this.Show();
+        }
+
+        private void Btn_Fine_management_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Fine_Management fine_management = new Fine_Management();
+            fine_management.administrator_id = administrator_id;
+            fine_management.ShowDialog();
             this.Show();
         }
     }
