@@ -223,46 +223,108 @@ FROM
                 
             }
 
-            /*INSERT INTO
-                book_borrowing_records
-            VALUES
-                (
-                    NULL,
-                    203,
-                    1,
-                    2,
-                    1,
-                    '2021-01-01',
-                    '2021-01-01',
-                    1,
-                    '2021-01-01',
-                    0,
-                    0
-                );*/
+            /*START TRANSACTION;
+
+INSERT INTO
+    book_borrowing_records
+VALUES
+    (
+        NULL,
+        203,
+        1,
+        2,
+        1,
+        '2021-01-01',
+        '2021-01-01',
+        1,
+        '2021-01-01',
+        0,
+        0
+    );
+
+UPDATE
+    book_collection_information
+SET
+    STATUS = 'lent'
+WHERE
+    BCid = 203;
+
+UPDATE
+    basic_information_books
+SET
+    quantity = quantity - 1
+WHERE
+    ISBN = (
+        SELECT
+            ISBN
+        FROM
+            book_collection_information
+        WHERE
+            BCid = 203
+    );
+
+UPDATE
+    reader_information
+SET
+    currently = currently + 1
+WHERE
+    Rid = 1;
+
+COMMIT;*/
 
             if (Lbl_Status.Text == "Add")
             {
-                
-                string query = string.Format("INSERT INTO book_borrowing_records VALUES (NULL, {0}, {1}, {2}, {3}, '{4}', '{5}', {6}, {7}, {8}, {9})", book_id, reader_id, administrator_borrow_id, administrator_return_id, borrowing_time, due_time, renewals, return_time, overdue, loss);
-                MySqlConnection conn = Database.GetMySqlConnection();
-                conn.Open();
-                MySqlCommand cmd = new MySqlCommand(query, conn);
-                int i = cmd.ExecuteNonQuery();
-                conn.Close();
+                using (MySqlConnection connection = Database.GetMySqlConnection())
+                {
+                    connection.Open();
 
-                if (i > 0)
-                {
-                    lbl_Note.ForeColor = Color.Blue;
-                    lbl_Note.Text = "Added successfully!";
-                    ClearTextBox();
-                    DataBind_Customer();
-                }
-                else
-                {
-                    lbl_Note.ForeColor = Color.Red;
-                    lbl_Note.Text = "Add failed!";
+                    MySqlTransaction transaction = connection.BeginTransaction();
+
+                    try
+                    {
+                        // 设置事务关联的命令
+                        MySqlCommand command1 = connection.CreateCommand();
+                        command1.Transaction = transaction;
+                        /*command1.CommandText = "INSERT INTO 借阅记录表 (图书馆藏信息主键, 读者信息主键) VALUES (@库存主键, @读者主键)";*/
+                        command1.CommandText = string.Format("INSERT INTO book_borrowing_records (BCid, Rid, BAid, RAid, borrowing_time, due_time, renewals, return_time, overdue, loss) VALUES ({0}, {1}, {2}, {3}, '{4}', '{5}', {6}, {7}, {8}, {9})", book_id, reader_id, administrator_borrow_id, administrator_return_id, borrowing_time, due_time, renewals, return_time, overdue, loss);
+
+                        MySqlCommand command2 = connection.CreateCommand();
+                        command2.Transaction = transaction;
+                        command2.CommandText = string.Format("UPDATE book_collection_information SET STATUS = 'lent' WHERE BCid = {0}", book_id);
+
+                        MySqlCommand command3 = connection.CreateCommand();
+                        command3.Transaction = transaction;
+                        command3.CommandText = string.Format("UPDATE basic_information_books SET quantity = quantity - 1 WHERE ISBN = (SELECT ISBN FROM book_collection_information WHERE BCid = {0})", book_id);
+
+                        MySqlCommand command4 = connection.CreateCommand();
+                        command4.Transaction = transaction;
+                        command4.CommandText = string.Format("UPDATE reader_information SET currently = currently + 1 WHERE Rid = {0}", reader_id);
+
+                        // 执行事务关联的命令
+                        command1.ExecuteNonQuery();
+                        command2.ExecuteNonQuery();
+                        command3.ExecuteNonQuery();
+                        command4.ExecuteNonQuery();
+
+                        // 提交事务
+                        transaction.Commit();
+                        Console.WriteLine("借阅图书成功！");
+
+                        ClearTextBox();
+                        DataBind_Customer();
+                        lbl_Note.Text = "Borrowed successfully!";
+                    }
+                    catch (Exception ex)
+                    {
+                        // 回滚事务
+                        transaction.Rollback();
+                        Console.WriteLine("借阅图书失败！");
+                        Console.WriteLine("错误信息：" + ex.Message);
+                    }
+                    
                 }
                 return;
+
             }
 
             if (Lbl_Status.Text == "Modify")

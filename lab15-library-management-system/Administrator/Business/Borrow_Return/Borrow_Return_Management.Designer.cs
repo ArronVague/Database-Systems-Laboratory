@@ -86,11 +86,11 @@
             this.groupBox2.Controls.Add(this.lv_Customer);
             this.groupBox2.Controls.Add(this.lbl_Note);
             this.groupBox2.Controls.Add(this.btn_Del);
-            this.groupBox2.Location = new System.Drawing.Point(11, 284);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox2.Location = new System.Drawing.Point(22, 568);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox2.Size = new System.Drawing.Size(485, 335);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Size = new System.Drawing.Size(970, 670);
             this.groupBox2.TabIndex = 24;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Reader information list";
@@ -112,11 +112,11 @@
             this.lv_Customer.FullRowSelect = true;
             this.lv_Customer.GridLines = true;
             this.lv_Customer.HideSelection = false;
-            this.lv_Customer.Location = new System.Drawing.Point(10, 18);
-            this.lv_Customer.Margin = new System.Windows.Forms.Padding(2);
+            this.lv_Customer.Location = new System.Drawing.Point(20, 36);
+            this.lv_Customer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lv_Customer.MultiSelect = false;
             this.lv_Customer.Name = "lv_Customer";
-            this.lv_Customer.Size = new System.Drawing.Size(468, 313);
+            this.lv_Customer.Size = new System.Drawing.Size(932, 622);
             this.lv_Customer.TabIndex = 19;
             this.lv_Customer.UseCompatibleStateImageBehavior = false;
             this.lv_Customer.View = System.Windows.Forms.View.Details;
@@ -170,18 +170,18 @@
             // lbl_Note
             // 
             this.lbl_Note.AutoSize = true;
-            this.lbl_Note.Location = new System.Drawing.Point(237, 0);
-            this.lbl_Note.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_Note.Location = new System.Drawing.Point(474, 0);
+            this.lbl_Note.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Note.Name = "lbl_Note";
-            this.lbl_Note.Size = new System.Drawing.Size(0, 12);
+            this.lbl_Note.Size = new System.Drawing.Size(0, 24);
             this.lbl_Note.TabIndex = 18;
             // 
             // btn_Del
             // 
-            this.btn_Del.Location = new System.Drawing.Point(161, -6);
-            this.btn_Del.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_Del.Location = new System.Drawing.Point(322, -12);
+            this.btn_Del.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_Del.Name = "btn_Del";
-            this.btn_Del.Size = new System.Drawing.Size(61, 24);
+            this.btn_Del.Size = new System.Drawing.Size(122, 48);
             this.btn_Del.TabIndex = 0;
             this.btn_Del.Text = "Delete";
             this.btn_Del.UseVisualStyleBackColor = true;
@@ -215,11 +215,11 @@
             this.groupBox1.Controls.Add(this.Nudown_Renewals);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(11, 11);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Location = new System.Drawing.Point(22, 22);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(485, 269);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(970, 538);
             this.groupBox1.TabIndex = 23;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Edit reader information  Status:";
@@ -228,111 +228,113 @@
             // 
             this.Cb_Loss.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Cb_Loss.FormattingEnabled = true;
-            this.Cb_Loss.Location = new System.Drawing.Point(320, 167);
+            this.Cb_Loss.Location = new System.Drawing.Point(640, 334);
+            this.Cb_Loss.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Cb_Loss.Name = "Cb_Loss";
-            this.Cb_Loss.Size = new System.Drawing.Size(60, 20);
+            this.Cb_Loss.Size = new System.Drawing.Size(116, 32);
             this.Cb_Loss.TabIndex = 58;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(247, 173);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Location = new System.Drawing.Point(494, 346);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(29, 12);
+            this.label9.Size = new System.Drawing.Size(58, 24);
             this.label9.TabIndex = 57;
             this.label9.Text = "Loss";
             // 
             // Txt_Return_Time
             // 
-            this.Txt_Return_Time.Location = new System.Drawing.Point(320, 108);
-            this.Txt_Return_Time.Margin = new System.Windows.Forms.Padding(2);
+            this.Txt_Return_Time.Location = new System.Drawing.Point(640, 216);
+            this.Txt_Return_Time.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Txt_Return_Time.Name = "Txt_Return_Time";
-            this.Txt_Return_Time.Size = new System.Drawing.Size(124, 21);
+            this.Txt_Return_Time.Size = new System.Drawing.Size(244, 35);
             this.Txt_Return_Time.TabIndex = 56;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(234, 111);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(468, 222);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(71, 12);
+            this.label2.Size = new System.Drawing.Size(142, 24);
             this.label2.TabIndex = 55;
             this.label2.Text = "Return time";
             // 
             // Txt_Due_Time
             // 
-            this.Txt_Due_Time.Location = new System.Drawing.Point(98, 195);
-            this.Txt_Due_Time.Margin = new System.Windows.Forms.Padding(2);
+            this.Txt_Due_Time.Location = new System.Drawing.Point(196, 390);
+            this.Txt_Due_Time.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Txt_Due_Time.Name = "Txt_Due_Time";
-            this.Txt_Due_Time.Size = new System.Drawing.Size(124, 21);
+            this.Txt_Due_Time.Size = new System.Drawing.Size(244, 35);
             this.Txt_Due_Time.TabIndex = 54;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(3, 195);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Location = new System.Drawing.Point(6, 390);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(53, 12);
+            this.label8.Size = new System.Drawing.Size(106, 24);
             this.label8.TabIndex = 53;
             this.label8.Text = "Due time";
             // 
             // Txt_Borrowing_time
             // 
-            this.Txt_Borrowing_time.Location = new System.Drawing.Point(98, 157);
-            this.Txt_Borrowing_time.Margin = new System.Windows.Forms.Padding(2);
+            this.Txt_Borrowing_time.Location = new System.Drawing.Point(196, 314);
+            this.Txt_Borrowing_time.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Txt_Borrowing_time.Name = "Txt_Borrowing_time";
-            this.Txt_Borrowing_time.Size = new System.Drawing.Size(124, 21);
+            this.Txt_Borrowing_time.Size = new System.Drawing.Size(244, 35);
             this.Txt_Borrowing_time.TabIndex = 52;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(3, 161);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(6, 322);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(89, 12);
+            this.label4.Size = new System.Drawing.Size(178, 24);
             this.label4.TabIndex = 51;
             this.label4.Text = "Borrowing time";
             // 
             // Lbl_Admin_return_ID
             // 
             this.Lbl_Admin_return_ID.AutoSize = true;
-            this.Lbl_Admin_return_ID.Location = new System.Drawing.Point(112, 139);
-            this.Lbl_Admin_return_ID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Lbl_Admin_return_ID.Location = new System.Drawing.Point(224, 278);
+            this.Lbl_Admin_return_ID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Lbl_Admin_return_ID.Name = "Lbl_Admin_return_ID";
-            this.Lbl_Admin_return_ID.Size = new System.Drawing.Size(47, 12);
+            this.Lbl_Admin_return_ID.Size = new System.Drawing.Size(94, 24);
             this.Lbl_Admin_return_ID.TabIndex = 50;
             this.Lbl_Admin_return_ID.Text = "Show ID";
             // 
             // Lbl_Admin_Borrow_ID
             // 
             this.Lbl_Admin_Borrow_ID.AutoSize = true;
-            this.Lbl_Admin_Borrow_ID.Location = new System.Drawing.Point(112, 115);
-            this.Lbl_Admin_Borrow_ID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Lbl_Admin_Borrow_ID.Location = new System.Drawing.Point(224, 230);
+            this.Lbl_Admin_Borrow_ID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Lbl_Admin_Borrow_ID.Name = "Lbl_Admin_Borrow_ID";
-            this.Lbl_Admin_Borrow_ID.Size = new System.Drawing.Size(47, 12);
+            this.Lbl_Admin_Borrow_ID.Size = new System.Drawing.Size(94, 24);
             this.Lbl_Admin_Borrow_ID.TabIndex = 49;
             this.Lbl_Admin_Borrow_ID.Text = "Show ID";
             // 
             // test
             // 
             this.test.AutoSize = true;
-            this.test.Location = new System.Drawing.Point(4, 139);
+            this.test.Location = new System.Drawing.Point(8, 278);
+            this.test.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.test.Name = "test";
-            this.test.Size = new System.Drawing.Size(95, 12);
+            this.test.Size = new System.Drawing.Size(190, 24);
             this.test.TabIndex = 48;
             this.test.Text = "Admin return ID";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(4, 115);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Location = new System.Drawing.Point(8, 230);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(95, 12);
+            this.label7.Size = new System.Drawing.Size(190, 24);
             this.label7.TabIndex = 47;
             this.label7.Text = "Admin borrow ID";
             // 
@@ -340,18 +342,19 @@
             // 
             this.Cb_Book_ID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Cb_Book_ID.FormattingEnabled = true;
-            this.Cb_Book_ID.Location = new System.Drawing.Point(73, 53);
+            this.Cb_Book_ID.Location = new System.Drawing.Point(146, 106);
+            this.Cb_Book_ID.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Cb_Book_ID.Name = "Cb_Book_ID";
-            this.Cb_Book_ID.Size = new System.Drawing.Size(121, 20);
+            this.Cb_Book_ID.Size = new System.Drawing.Size(238, 32);
             this.Cb_Book_ID.TabIndex = 46;
             // 
             // Lbl_Show_ID
             // 
             this.Lbl_Show_ID.AutoSize = true;
-            this.Lbl_Show_ID.Location = new System.Drawing.Point(112, 28);
-            this.Lbl_Show_ID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Lbl_Show_ID.Location = new System.Drawing.Point(224, 56);
+            this.Lbl_Show_ID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Lbl_Show_ID.Name = "Lbl_Show_ID";
-            this.Lbl_Show_ID.Size = new System.Drawing.Size(47, 12);
+            this.Lbl_Show_ID.Size = new System.Drawing.Size(94, 24);
             this.Lbl_Show_ID.TabIndex = 45;
             this.Lbl_Show_ID.Text = "Show ID";
             // 
@@ -359,18 +362,19 @@
             // 
             this.Cb_Overdue.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Cb_Overdue.FormattingEnabled = true;
-            this.Cb_Overdue.Location = new System.Drawing.Point(320, 133);
+            this.Cb_Overdue.Location = new System.Drawing.Point(640, 266);
+            this.Cb_Overdue.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Cb_Overdue.Name = "Cb_Overdue";
-            this.Cb_Overdue.Size = new System.Drawing.Size(60, 20);
+            this.Cb_Overdue.Size = new System.Drawing.Size(116, 32);
             this.Cb_Overdue.TabIndex = 43;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(247, 139);
-            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Location = new System.Drawing.Point(494, 278);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(47, 12);
+            this.label11.Size = new System.Drawing.Size(94, 24);
             this.label11.TabIndex = 34;
             this.label11.Text = "Overdue";
             // 
@@ -378,36 +382,38 @@
             // 
             this.Cb_Reader_ID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Cb_Reader_ID.FormattingEnabled = true;
-            this.Cb_Reader_ID.Location = new System.Drawing.Point(73, 81);
+            this.Cb_Reader_ID.Location = new System.Drawing.Point(146, 162);
+            this.Cb_Reader_ID.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Cb_Reader_ID.Name = "Cb_Reader_ID";
-            this.Cb_Reader_ID.Size = new System.Drawing.Size(121, 20);
+            this.Cb_Reader_ID.Size = new System.Drawing.Size(238, 32);
             this.Cb_Reader_ID.TabIndex = 25;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(8, 84);
+            this.label6.Location = new System.Drawing.Point(16, 168);
+            this.label6.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(59, 12);
+            this.label6.Size = new System.Drawing.Size(118, 24);
             this.label6.TabIndex = 24;
             this.label6.Text = "Reader ID";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(11, 56);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(22, 112);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(47, 12);
+            this.label3.Size = new System.Drawing.Size(94, 24);
             this.label3.TabIndex = 22;
             this.label3.Text = "Book ID";
             // 
             // Btn_Category_Management_Return
             // 
-            this.Btn_Category_Management_Return.Location = new System.Drawing.Point(428, 233);
-            this.Btn_Category_Management_Return.Margin = new System.Windows.Forms.Padding(2);
+            this.Btn_Category_Management_Return.Location = new System.Drawing.Point(856, 466);
+            this.Btn_Category_Management_Return.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Btn_Category_Management_Return.Name = "Btn_Category_Management_Return";
-            this.Btn_Category_Management_Return.Size = new System.Drawing.Size(50, 22);
+            this.Btn_Category_Management_Return.Size = new System.Drawing.Size(100, 44);
             this.Btn_Category_Management_Return.TabIndex = 21;
             this.Btn_Category_Management_Return.Text = "Return";
             this.Btn_Category_Management_Return.UseVisualStyleBackColor = true;
@@ -416,19 +422,19 @@
             // Lbl_Status
             // 
             this.Lbl_Status.AutoSize = true;
-            this.Lbl_Status.Location = new System.Drawing.Point(218, 0);
-            this.Lbl_Status.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Lbl_Status.Location = new System.Drawing.Point(436, 0);
+            this.Lbl_Status.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Lbl_Status.Name = "Lbl_Status";
-            this.Lbl_Status.Size = new System.Drawing.Size(41, 12);
+            this.Lbl_Status.Size = new System.Drawing.Size(82, 24);
             this.Lbl_Status.TabIndex = 17;
             this.Lbl_Status.Text = "label7";
             // 
             // btn_Cancel
             // 
-            this.btn_Cancel.Location = new System.Drawing.Point(374, 233);
-            this.btn_Cancel.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_Cancel.Location = new System.Drawing.Point(748, 466);
+            this.btn_Cancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_Cancel.Name = "btn_Cancel";
-            this.btn_Cancel.Size = new System.Drawing.Size(50, 22);
+            this.btn_Cancel.Size = new System.Drawing.Size(100, 44);
             this.btn_Cancel.TabIndex = 16;
             this.btn_Cancel.Text = "Cancel";
             this.btn_Cancel.UseVisualStyleBackColor = true;
@@ -436,10 +442,10 @@
             // 
             // btn_Save
             // 
-            this.btn_Save.Location = new System.Drawing.Point(320, 233);
-            this.btn_Save.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_Save.Location = new System.Drawing.Point(640, 466);
+            this.btn_Save.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_Save.Name = "btn_Save";
-            this.btn_Save.Size = new System.Drawing.Size(50, 22);
+            this.btn_Save.Size = new System.Drawing.Size(100, 44);
             this.btn_Save.TabIndex = 15;
             this.btn_Save.Text = "Save";
             this.btn_Save.UseVisualStyleBackColor = true;
@@ -447,88 +453,93 @@
             // 
             // Nudown_Renewals
             // 
-            this.Nudown_Renewals.Location = new System.Drawing.Point(320, 80);
-            this.Nudown_Renewals.Margin = new System.Windows.Forms.Padding(2);
+            this.Nudown_Renewals.Location = new System.Drawing.Point(640, 160);
+            this.Nudown_Renewals.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Nudown_Renewals.Maximum = new decimal(new int[] {
             1000,
             0,
             0,
             0});
             this.Nudown_Renewals.Name = "Nudown_Renewals";
-            this.Nudown_Renewals.Size = new System.Drawing.Size(60, 21);
+            this.Nudown_Renewals.Size = new System.Drawing.Size(120, 35);
             this.Nudown_Renewals.TabIndex = 12;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(242, 76);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(494, 168);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(53, 12);
+            this.label5.Size = new System.Drawing.Size(106, 24);
             this.label5.TabIndex = 6;
             this.label5.Text = "Renewals";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(24, 28);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(48, 56);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(17, 12);
+            this.label1.Size = new System.Drawing.Size(34, 24);
             this.label1.TabIndex = 0;
             this.label1.Text = "ID";
             // 
             // Btn_Information_Management
             // 
-            this.Btn_Information_Management.Location = new System.Drawing.Point(324, 122);
+            this.Btn_Information_Management.Location = new System.Drawing.Point(648, 244);
+            this.Btn_Information_Management.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Btn_Information_Management.Name = "Btn_Information_Management";
-            this.Btn_Information_Management.Size = new System.Drawing.Size(158, 50);
+            this.Btn_Information_Management.Size = new System.Drawing.Size(316, 100);
             this.Btn_Information_Management.TabIndex = 22;
             this.Btn_Information_Management.Text = "Information management";
             this.Btn_Information_Management.UseVisualStyleBackColor = true;
             // 
             // Btn_Category_Management
             // 
-            this.Btn_Category_Management.Location = new System.Drawing.Point(324, 20);
+            this.Btn_Category_Management.Location = new System.Drawing.Point(648, 40);
+            this.Btn_Category_Management.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Btn_Category_Management.Name = "Btn_Category_Management";
-            this.Btn_Category_Management.Size = new System.Drawing.Size(158, 50);
+            this.Btn_Category_Management.Size = new System.Drawing.Size(316, 100);
             this.Btn_Category_Management.TabIndex = 21;
             this.Btn_Category_Management.Text = "Category management";
             this.Btn_Category_Management.UseVisualStyleBackColor = true;
             // 
             // statusStrip1
             // 
+            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(32, 32);
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1,
             this.Lbl_Administrator_ID});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 629);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 1266);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(503, 25);
+            this.statusStrip1.Padding = new System.Windows.Forms.Padding(2, 0, 28, 0);
+            this.statusStrip1.Size = new System.Drawing.Size(1006, 42);
             this.statusStrip1.TabIndex = 20;
             this.statusStrip1.Text = "statusStrip1";
             // 
             // toolStripStatusLabel1
             // 
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(100, 20);
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(158, 32);
             this.toolStripStatusLabel1.Text = "Administrator";
             // 
             // Lbl_Administrator_ID
             // 
             this.Lbl_Administrator_ID.Name = "Lbl_Administrator_ID";
-            this.Lbl_Administrator_ID.Size = new System.Drawing.Size(151, 20);
+            this.Lbl_Administrator_ID.Size = new System.Drawing.Size(237, 32);
             this.Lbl_Administrator_ID.Text = "toolStripStatusLabel2";
             // 
             // Borrow_Return_Management
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(503, 654);
+            this.ClientSize = new System.Drawing.Size(1006, 1308);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.Btn_Information_Management);
             this.Controls.Add(this.Btn_Category_Management);
             this.Controls.Add(this.statusStrip1);
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "Borrow_Return_Management";
             this.Text = "Borrow_Return_Management";
             this.Load += new System.EventHandler(this.Borrow_Return_Management_Load);
