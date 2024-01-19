@@ -397,3 +397,12 @@ FodyWeavers.xsd
 # JetBrains Rider
 *.sln.iml
 *.ini
+
+# latex
+*.gz
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.pdf
+*.out
