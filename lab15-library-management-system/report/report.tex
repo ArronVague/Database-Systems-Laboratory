@@ -8,6 +8,7 @@
 \usepackage{amsmath,amsfonts}
 \usepackage{hyperref}
 
+
 \begin{document}
 \sloppy % 解决中英文混排的断行问题
 
@@ -43,9 +44,66 @@
 
 
 \section{读者信息管理}
+打开窗体时，能够加载读者信息、能够加载读者类别信息（图\ref{fig:reader_info_mag}）；能够添加读者信息，添加后能够在窗体中实时更新（图\ref{fig:add}和图\ref{fig:add_suc}）；能够修改读者信息，修改后能够在窗体中实时更新（图\ref{fig:modify}和图\ref{fig:modify_suc}）；能够删除读者信息，删除后能够在窗体中实时更新。
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{../pic/reader_info_mag.png}
+    \caption{Reader Info Management}
+    \label{fig:reader_info_mag}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{../pic/add.png}
+    \caption{Add Reader Info}
+    \label{fig:add}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{../pic/add_suc.png}
+    \caption{Add Reader Info Success}
+    \label{fig:add_suc}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{../pic/modify.png}
+    \caption{Modify Reader Info}
+    \label{fig:modify}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{../pic/modify_suc.png}
+    \caption{Modify Reader Info Success}
+    \label{fig:modify_suc}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{../pic/delete.png}
+    \caption{Delete Reader Info}
+    \label{fig:delete}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{../pic/delete_suc.png}
+    \caption{Delete Reader Info Success}
+    \label{fig:delete_suc}
+\end{figure}
 
 \section{图书借阅管理}
 能够为读者办理借阅图书，并且使用事务实现业务；实现借阅图书业务后，在数据库留下借阅记录、更新图书馆藏信息、更新图书基本信息；更新读者信息表中的已借数量。
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{../pic/transaction.png}
+    \caption{Transaction}
+    \label{fig:transaction}
+\end{figure}
 
 % 参考文献
 \begin{thebibliography}{99}
