@@ -21,6 +21,7 @@
 \section{登录界面}
 
 \subsection{输入错误用户名或者密码，能够提示相关错误}
+图\ref{fig:login_fail}为输入错误用户名或者密码后的界面。
 
 % 图片
 \begin{figure}[H]
@@ -31,9 +32,10 @@
 \end{figure}
 
 \subsection{输入正确用户名和密码，能够登录}
+用户输入正确用户名和密码后，无需提示，直接进入系统主界面（图\ref{fig:admin_main}）。
 
 \section{系统主界面}
-提供各个功能模块的访问链接/按钮
+提供各个功能模块的访问链接/按钮（图\ref{fig:admin_main}）。
 
 \begin{figure}[H]
     \centering
@@ -44,7 +46,9 @@
 
 
 \section{读者信息管理}
-打开窗体时，能够加载读者信息、能够加载读者类别信息（图\ref{fig:reader_info_mag}）；能够添加读者信息，添加后能够在窗体中实时更新（图\ref{fig:add}和图\ref{fig:add_suc}）；能够修改读者信息，修改后能够在窗体中实时更新（图\ref{fig:modify}和图\ref{fig:modify_suc}）；能够删除读者信息，删除后能够在窗体中实时更新。
+
+\subsection{打开窗体时，能够加载读者信息、能够加载读者类别信息}
+图\ref{fig:reader_info_mag}为读者信息管理界面，能够加载读者信息、能够加载读者类别信息。
 
 \begin{figure}[H]
     \centering
@@ -52,6 +56,9 @@
     \caption{Reader Info Management}
     \label{fig:reader_info_mag}
 \end{figure}
+
+\subsection{能够添加读者信息，添加后能够在窗体中实时更新}
+测试添加读者信息功能，添加后能够在窗体中实时更新（图\ref{fig:add}到图\ref{fig:add_suc}）。
 
 \begin{figure}[H]
     \centering
@@ -67,6 +74,9 @@
     \label{fig:add_suc}
 \end{figure}
 
+\subsection{能够修改读者信息，修改后能够在窗体中实时更新}
+测试修改读者信息功能，修改后能够在窗体中实时更新（图\ref{fig:modify}到图\ref{fig:modify_suc}）。
+
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\textwidth]{../pic/modify.png}
@@ -80,6 +90,9 @@
     \caption{Modify Reader Info Success}
     \label{fig:modify_suc}
 \end{figure}
+
+\subsection{能够删除读者信息，删除后能够在窗体中实时更新}
+测试删除读者信息功能，删除后能够在窗体中实时更新（图\ref{fig:delete}到图\ref{fig:delete_suc}）。
 
 \begin{figure}[H]
     \centering
@@ -96,20 +109,84 @@
 \end{figure}
 
 \section{图书借阅管理}
-能够为读者办理借阅图书，并且使用事务实现业务；实现借阅图书业务后，在数据库留下借阅记录、更新图书馆藏信息、更新图书基本信息；更新读者信息表中的已借数量。
+
+\subsection{能够为读者办理借阅图书，并且使用事务实现业务}
+
+图\ref{fig:borrow}为借阅图书界面，能够为读者办理借阅图书。代码实现见图\ref{fig:transaction}。
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{../pic/borrow.png}
+    \caption{Borrow Book}
+    \label{fig:borrow}
+\end{figure}
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\textwidth]{../pic/transaction.png}
-    \caption{Transaction}
+    \caption{Code of Transaction}
     \label{fig:transaction}
 \end{figure}
 
-% 参考文献
-\begin{thebibliography}{99}
-    \bibitem{ref1} GUSLOVESMATH. \href{https://www.kaggle.com/code/guslovesmath/los-angeles-crime-data-quick-eda}{Los Angeles Crime Data Quick EDA}.
-    \bibitem{ref2} ANDREI SAFRONOV. \href{https://www.kaggle.com/code/safronov00/crimesolver-predictor#2.-Clean-Data}{CrimeSolver Predictor}.
-\end{thebibliography}
+\subsection{实现借阅图书业务后，在数据库留下借阅记录}
+图\ref{fig:records}为借阅图书后，数据库中的借阅记录。
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{../pic/records.png}
+    \caption{Records of Borrowing Books}
+    \label{fig:records}
+\end{figure}
+
+\subsection{更新图书馆藏信息}
+图书馆藏信息表中的 status 字段记录了图书当前状态，借阅图书后，该字段会自动更新，由 not lent 变为 lent（图\ref{fig:collection}到图\ref{fig:collection_after}）。
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{../pic/collection.png}
+    \caption{Collection of Books before Borrowing}
+    \label{fig:collection}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{../pic/collection_after.png}
+    \caption{Collection of Books after Borrowing}
+    \label{fig:collection_after}
+\end{figure}
+
+\subsection{更新图书基本信息}
+图书基本信息表中的 quantity 字段记录了图书当前馆藏数量，借阅图书后，该字段会自动更新，由11变为10（图\ref{fig:basic}到图\ref{fig:basic_after}）。
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{../pic/basic.png}
+    \caption{Basic Info of Books before Borrowing}
+    \label{fig:basic}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{../pic/basic_after.png}
+    \caption{Basic Info of Books after Borrowing}
+    \label{fig:basic_after}
+\end{figure}
+
+\subsection{更新读者信息表中的已借数量}
+读者信息表中的 currently 字段记录了读者当前已借数量，借阅图书后，该字段会自动更新，由0变为1（图\ref{fig:reader}到图\ref{fig:reader_after}）。
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{../pic/reader.png}
+    \caption{Reader Info before Borrowing}
+    \label{fig:reader}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{../pic/reader_after.png}
+    \caption{Reader Info after Borrowing}
+    \label{fig:reader_after}
+\end{figure}
 
 \end{document}
